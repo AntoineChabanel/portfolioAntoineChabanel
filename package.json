@@ -1,14 +1,14 @@
 {
-  "name": "portfolio-website",
+  "name": "portfolio-antoine-chabanel",
   "version": "1.0.0",
-  "description": "Dynamic portfolio website",
+  "description": "Portfolio website for Antoine Chabanel",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VaibhavAswal/portfolioWebsite.git"
+    "url": "git+https://github.com/Niro2899/portfolioAntoineChabanel.git"
   },
   "keywords": [
     "portfolio",
@@ -25,6 +25,7 @@
     "body-parse": "^0.1.0",
     "cors": "^2.8.5",
     "express": "^4.17.2",
+    "nodemon": "^3.1.0",
     "pug": "^3.0.2"
   }
 }

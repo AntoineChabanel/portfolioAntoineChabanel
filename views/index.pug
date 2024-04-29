@@ -9,18 +9,18 @@ head
   link(rel='manifest' href='assets/img/favicon_io/site.webmanifest')
 
   // =============== BOXICONS ===============
-  link(href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet')
+  link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
   // =============== SWIPER CSS ===============
   link(rel='stylesheet' href='assets/css/swiper-bundle.min.css')
   // =============== CSS ===============
   link(rel='stylesheet' href='assets/css/styles.css')
   script(src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js")
 
-  title  Vaibhav Aswal | Portfolio 
+  title  Antoine Chabanel
 // =============== HEADER ===============
 header#header.header.transHead
   nav.nav.container
-    a.nav__logo(href='#') Vaibhav
+    a.nav__logo(href='#') Antoine
     .nav__menu
       ul.nav__list
         li.nav__item
@@ -41,29 +41,29 @@ header#header.header.transHead
     // Theme change button
     i#theme-button.bx.bx-moon.change-theme
 i.bx.bx-moon.change-theme
-a.nav__logo2(href='#') Vaibhav
+a.nav__logo2(href='#') Antoine Chabanel
 // =============== MAIN ===============
 main.main
   // =============== HOME ===============
   section#home.home
     .home__container.container.grid
       .home__data
-        span.home__greeting Hello, I&apos;m
-        h1.home__name Vaibhav Aswal
-        h3.home__education FullStack Developer
-        .home__buttons
-          a.button.button--ghost(href='assets/pdf/resume.pdf')
-            | View CV
-          a.button(onclick="goTo('about');") About me
+        span.home__greeting Bonjour ! Je suis
+        h1.home__name Antoine Chabanel
+        //- h3.home__education Développeur de jeux vidéos
+        //- .home__buttons
+        //-   a.button.button--ghost(href='assets/pdf/resume.pdf')
+        //-     | View CV
+        //-   a.button(onclick="goTo('about');") About me
       .home__handle
-        lottie-player(src='https://assets4.lottiefiles.com/packages/lf20_0bptkpmg.json' background='transparent' speed='1' style='width: 300px; height: 300px;' loop='' autoplay='')
+        //lottie-player(src='https://assets4.lottiefiles.com/packages/lf20_0bptkpmg.json' background='transparent' speed='1' style='width: 300px; height: 300px;' loop='' autoplay='')
       .home__social
-        a.home__social-link(href='https://github.com/VaibhavAswal' target='_blank')
-          i.bx.bxl-github
-        a.home__social-link(href='https://www.instagram.com/that_back.bencher' target='_blank')
-          i.bx.bxl-instagram
-        a.home__social-link(href='https://twitter.com/vaibhav_says' target='_blank')
-          i.bx.bxl-twitter
+        a.home__social-link(href='https://www.linkedin.com/in/antoine-chabanel/' target='_blank')
+          i.bx.bxl-linkedin-square
+        a.home__social-link(href='mailto:antoine.chabanel42@gmail.com' target='_blank')
+          i.bx.bx-mail-send
+        a.home__social-link(href='https://linktr.ee/antoinechabanel' target='_blank')
+          i.bx.bxs-tree
       a.home__scroll(onclick="goTo('about');")
         i.bx.bx-mouse.home__scroll-icon
         span.home__scroll-name Scroll Down
@@ -92,6 +92,53 @@ main.main
           | scalability. Experienced with mongoDB, Express.js, React.js, Node.js, C++,
           | Python, C, JavaScript, Flask, &amp; stackOverflow se CopyPaste krne me.
         a.button(onclick="goTo('contact');") Contact Me
+    // =============== WORK ===============
+  section#work.work.section
+    span.section__subtitle My Portfolio
+    h2.section__title Recent Works
+    .work__filters
+      span.work__item.active-work(data-filter='all') Tout
+      span.work__item(data-filter='.videogame') Jeux vidéos
+      span.work__item(data-filter='.web') Web
+      span.work__item(data-filter='.other') Autres
+    .work__container.container.grid
+      .work__card.mix.videogame
+        img.work__img(src='/assets/img/neocity/neocity-preview-01.gif' alt='')
+        h3.work__title NEOCITY
+        p.work__subtitle Dans Neocity, vous incarnez le maire d'une ville en pleine expansion, confrontée aux défis du développement durable et de la préservation de l'environnement.&quot;
+        .wbtn
+          a.work__button(href='https://www.youtube.com/watch?v=Og4vOZzyFlg')
+            | Trailer 
+            i.bx.bx-video-recording
+          a.work__button(href='https://github.com/VaibhavAswal/ImageColoriser')
+            | Voir plus 
+            i.bx.bx-right-arrow-alt.work__icon
+      .work__card.mix.videogame
+        img.work__img(src='/assets/img/lastdance/lastdance-preview-01.gif' alt='')
+        h3.work__title LAST DANCE
+        p.work__subtitle
+          | Le platformer qui vous embarque dans l'univers de groupes de musique !&quot;
+        .wbtn
+          a.work__button(href='https://www.youtube.com/watch?v=nLD9zIZTlh0')
+            | Trailer 
+            i.bx.bx-video-recording
+          a.work__button(href='https://github.com/VaibhavAswal/toDoApp')
+            | Voir plus 
+            i.bx.bx-right-arrow-alt.work__icon
+      .work__card.mix.web
+        img.work__img(src='/assets/img/remindr/remindr-preview-01.gif' alt='')
+        h3.work__title Remindr
+        p.work__subtitle
+          | Application web de rappels partagés entre utilisateurs&quot;
+        .wbtn
+          a.work__button(href='https://www.youtube.com/watch?v=nLD9zIZTlh0')
+            | Demo 
+            i.bx.bx-video-recording
+          a.work__button(href='https://github.com/VaibhavAswal/toDoApp')
+            | Voir plus 
+            i.bx.bx-right-arrow-alt.work__icon
+  .fll
+    a.button(href='/projects') Voir plus
   // =============== SKILLS ===============
   section#skills.skills.section
     span.section__subtitle My abilities
@@ -167,41 +214,6 @@ main.main
               div
                 h3.skills__name C++
                 span.skills__level Intermediate
-    // =============== WORK ===============
-  section#work.work.section
-    span.section__subtitle My Portfolio
-    h2.section__title Recent Works
-    .work__filters
-      span.work__item.active-work(data-filter='all') All
-      span.work__item(data-filter='.web') Web
-      span.work__item(data-filter='.android') Android
-      span.work__item(data-filter='.robotics') Robotics
-    .work__container.container.grid
-      .work__card.mix.web
-        img.work__img(src='https://raw.githubusercontent.com/VaibhavAswal/ImageColoriser/main/images/ezgif-5-05a708c1ee.gif' alt='')
-        h3.work__title Image Coloriser
-        p.work__subtitle Converts Black and White images into Colored using API from deepai.org
-        .wbtn
-          a.work__button(href='https://coloriser.vaibhavaswal.codes')
-            | Demo 
-            i.bx.bx-right-arrow-alt.work__icon
-          a.work__button(href='https://github.com/VaibhavAswal/ImageColoriser')
-            | More 
-            i.bx.bx-right-arrow-alt.work__icon
-      .work__card.mix.web
-        img.work__img(src='https://raw.githubusercontent.com/VaibhavAswal/toDoApp/main/images/ezgif.gif' alt='')
-        h3.work__title To Do App
-        p.work__subtitle
-          | Responsive to-do application with permanent local storage and weather functionality&quot;
-        .wbtn
-          a.work__button(href='https://vaibhavaswal.github.io/toDoApp/')
-            | Demo 
-            i.bx.bx-right-arrow-alt.work__icon
-          a.work__button(href='https://github.com/VaibhavAswal/toDoApp')
-            | More 
-            i.bx.bx-right-arrow-alt.work__icon
-  .fll
-    a.button(href='/projects') More Projects
   // =============== TESTIMONIALS ===============
   section#testimonial.testimonial.section
     span.section__subtitle My clients say
