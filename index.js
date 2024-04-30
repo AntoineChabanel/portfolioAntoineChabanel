@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const config = require('./config');
 const axios = require('axios');
 const { json } = require('body-parser');
+const projectsRouter = require('./routers/projectsRouter');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -39,26 +40,28 @@ app.get("/", (req, res) => {
     res.render('index')
 })
 
-app.get("/projects", (req, res) => {
-        let repoInfo;
-    axios({
-        method: "get",
-        url: `https://api.github.com/users/${config.githubUsername}/repos`,
-        headers: {
-            Authorization: `Bearer ${config.githubToken}`,
-            "Content-Type": "application/json",
-            "Accept": "application/vnd.github.mercy-preview+json" // MUST ADD TO INCLUDE TOPICS
-        }
-    }).then(response => {
-       repoInfo = response.data;
-       res.render('projects', {
-        repoInfo: repoInfo
-    });
-    })
-    .catch(err => {
-        console.log(err);
-    });
-});
+app.use('/projects', projectsRouter);
+
+// app.get("/projects", (req, res) => {
+//         let repoInfo;
+//     axios({
+//         method: "get",
+//         url: `https://api.github.com/users/${config.githubUsername}/repos`,
+//         headers: {
+//             Authorization: `Bearer ${config.githubToken}`,
+//             "Content-Type": "application/json",
+//             "Accept": "application/vnd.github.mercy-preview+json" // MUST ADD TO INCLUDE TOPICS
+//         }
+//     }).then(response => {
+//        repoInfo = response.data;
+//        res.render('projects', {
+//         repoInfo: repoInfo
+//     });
+//     })
+//     .catch(err => {
+//         console.log(err);
+//     });
+// });
 
 app.listen(port, () => {
     console.log(`listening on port: ${port}`);

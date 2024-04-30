@@ -1,0 +1,86 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // =============== FAVICON ===============
+  link(rel='apple-touch-icon' sizes='180x180' href='assets/img/favicon_io/apple-touch-icon.png')
+  link(rel='icon' type='image/png' sizes='32x32' href='assets/img/favicon_io/favicon-32x32.png')
+  link(rel='icon' type='image/png' sizes='16x16' href='assets/img/favicon_io/favicon-16x16.png')
+  link(rel='manifest' href='assets/img/favicon_io/site.webmanifest')
+
+  // =============== BOXICONS ===============
+  link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
+  // =============== SWIPER CSS ===============
+  link(rel='stylesheet' href='assets/css/swiper-bundle.min.css')
+  // =============== CSS ===============
+  link(rel='stylesheet' href='assets/css/styles.css')
+  script(src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js")
+
+  title  Antoine Chabanel
+// =============== HEADER ===============
+header#header.header.transHead
+  nav.nav.container
+    a.nav__logo(href='#') Antoine
+    .nav__menu
+      ul.nav__list
+        li.nav__item
+          a.nav__link.active-link(onclick="goTo('home'); return false;" href='#home')
+            i.bx.bx-home-alt
+        li.nav__item
+          a.nav__link(onclick="goTo('about'); return false;" href='#about')
+            i.bx.bx-user
+        li.nav__item
+          a.nav__link(onclick="goTo('skills'); return false;" href='#skills')
+            i.bx.bx-trophy
+        li.nav__item
+          a.nav__link(onclick="goTo('work'); return false;" href='#work')
+            i.bx.bx-briefcase-alt
+        li.nav__item
+          a.nav__link(onclick="goTo('contact'); return false;" href='#contact')
+            i.bx.bx-message-square
+    // Theme change button
+    i#theme-button.bx.bx-moon.change-theme
+i.bx.bx-moon.change-theme
+a.nav__logo2(href='#') Antoine Chabanel
+// =============== MAIN ===============
+main.main
+    block content
+// =============== FOOTER ===============
+footer.footer
+  .footer__container.container
+    h1.footer__title Merci de votre visite !
+    ul.footer__list
+      li
+        a.footer__link(onclick="goTo('about');") À propos
+      li
+        a.footer__link(onclick="goTo('work');") Projets
+    h2.footer__love
+      | Pour en voir plus:
+    ul.footer__social
+      a.footer__social-link(href='https://linktr.ee/antoinechabanel' target='_blank')
+        i.bx.bxs-tree
+      a.footer__social-link(href='https://www.linkedin.com/in/antoine-chabanel/' target='_blank')
+        i.bx.bxl-linkedin-square
+      a.footer__social-link(href='mailto:antoine.chabanel42@gmail.com' target='_blank')
+        i.bx.bx-mail-send
+
+
+    //////////////////////////////////////////////
+    //YOU ARE NOT ALLOWED TO REMOVE CREDIT LINKS//
+    /////////////////////////////////////////////
+    h2.footer__love
+      | Front-end de base fait avec 
+      span(style='color: #e25555;') &hearts; 
+      | par 
+      a(href="https://instagram.com/that_back.bencher" target="_blank")
+        | Vaibhav Aswal 
+    //////////////////////////////////////////////
+    //YOU ARE NOT ALLOWED TO REMOVE CREDIT LINKS//
+    /////////////////////////////////////////////
+    
+    
+    span.footer__copy
+        |Licence utilisée: GNU GPL v3
+        br
+        |&copy; Vaibhav Aswal. All rights reserves
+    block scripts

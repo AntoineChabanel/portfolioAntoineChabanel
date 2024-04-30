@@ -959,6 +959,7 @@ body.light-theme{
   padding: .25rem;
   border-radius: .25rem;
   font-size: 1rem;
+  margin-top: .5rem;
   display: inline-flex;
 }
 

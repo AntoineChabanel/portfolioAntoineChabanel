@@ -1,0 +1,49 @@
+extends ../layout
+
+block content
+  section#skills.skills.section
+      h2.section__title All Projects
+      span.section__subtitle Fetched from git hub using github api
+      .skills__container.container.grid.pro
+        .skills__content 
+              h3.skills__title2= 'Project number 1'
+              p.skills__subtitle= 'Created on '
+              .skills__box
+                .skills__groups2
+                    .skills__data
+                        i.bx.bx-code-curly
+                        div.projects
+                          h3.skills__name Name
+                          span.skills__level2= "papaw"
+                    .skills__data
+                        i.bx.bx-code-curly
+                        div.projects
+                          h3.skills__name Demo
+                          a.skills__level2(href="" target="_blank") Click here
+                    .skills__data
+                        i.bx.bx-code-curly
+                        div.projects
+                          h3.skills__name More info
+                          a.skills__level2(href="" target="_blank") Click Here
+                .skills__groups2
+                    .skills__data
+                        i.bx.bx-code-curly
+                        div.projects
+                          h3.skills__name Licence
+                          a.skills__level2(href= "" target="_blank") MIT
+                    .skills__data
+                        i.bx.bx-code-curly
+                        div.projects
+                          h3.skills__name Stars
+                          span.skills__level= "1000"
+                    .skills__data
+                        i.bx.bx-code-curly
+                        div.projects
+                          h3.skills__name Language
+                          span.skills__level= "c"
+
+block scripts
+  // =============== SCROLLREVEAL ===============
+  script(src='assets/js/scrollreveal.min.js')
+  // =============== MAIN JS ===============
+  script(src='assets/js/mainProjects.js')
