@@ -7,9 +7,6 @@ const router = express.Router();
 router.get('/', controller.showProjects);
 
 // Route GET pour une page de projet spécifique
-router.get('/:id', (req, res) => {
-    const projectId = req.params.id;
-    res.send(`Affichage du projet avec l'ID ${projectId}`);
-});
+router.get('/:name', controller.showProjectByName);
 
 module.exports = router;
