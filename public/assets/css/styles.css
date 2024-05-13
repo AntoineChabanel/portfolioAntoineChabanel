@@ -756,6 +756,10 @@ body.light-theme{
   padding: 1rem;
   border-radius: 1rem;
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .work__img{

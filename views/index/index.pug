@@ -17,6 +17,9 @@ block include
   // =============== IZIMODAL ===============
   link(rel='stylesheet' href='assets/css/iziModal.min.css')
   script(src='assets/js/iziModal.min.js')
+  // =============== TIPPYJS ===============
+  script(src='https://unpkg.com/@popperjs/core@2')
+  script(src='https://unpkg.com/tippy.js@6')
 
 block title
   title Antoine Chabanel - Portfolio
@@ -106,40 +109,58 @@ block content
           img.work__img(src='/assets/img/neocity/neocity-preview-01.gif' alt='')
           h3.work__title NEOCITY 
             i.bx.bx-leaf(style="color: #00b894; font-size: 1.25rem; margin-left: 0.5rem;")
-          p.work__subtitle Dans Neocity, vous incarnez le maire d'une ville en pleine expansion, confrontée aux défis du développement durable et de la préservation de l'environnement.
+          script(type="text/javascript").
+            tippy('.bx-leaf', {
+              theme: 'translucent',
+              content: 'Développement durable',
+              placement: 'top',
+            });
+          p.work__subtitle Création de Neocity: vous incarnez le maire d'une ville en pleine expansion, confrontée aux défis du développement durable et de la préservation de l'environnement.
           a.work__subtitle(href="https://www.linkedin.com/posts/game-only_accessibilitaez-numaezriqueresponsable-jeuvideo-activity-7191793951626956801-RGxt/?utm_source=share&utm_medium=member_desktop" style="text-decoration: underline;" target="_blank") Ce jeu a participé au concours de GameOnly et a décroché la 3ème place.
           .wbtn
-            a.work__button(href='https://www.youtube.com/watch?v=Og4vOZzyFlg' target="_blank")
+            a.work__buttonseemore(href='https://www.youtube.com/watch?v=Og4vOZzyFlg' target="_blank")
               | Trailer 
               i.bx.bx-video-recording
-          a.work__buttonseemore(href='/projects/Neocity' target='_blank')
-            | Voir plus 
-            i.bx.bx-right-arrow-alt.work__icon
+            a.work__buttonseemore(href='/projects/Neocity' target='_blank')
+              | Voir plus 
+              i.bx.bx-right-arrow-alt.work__icon
         .work__card.mix.videogame
           img.work__img(src='/assets/img/lastdance/lastdance-preview-01.gif' alt='')
           h3.work__title LAST DANCE
           p.work__subtitle
-            | Le platformer qui vous embarque dans l'univers de groupes de musique !
+            | Création de Last Dance, le platformer qui vous embarque dans l'univers de groupes de musique !
           .wbtn
-            a.work__button(href='https://www.youtube.com/watch?v=nLD9zIZTlh0' target="_blank")
+            a.work__buttonseemore(href='https://www.youtube.com/watch?v=nLD9zIZTlh0' target="_blank")
               | Trailer 
               i.bx.bx-video-recording
-          a.work__buttonseemore(href='/projects/LastDance' target='_blank')
-            | Voir plus 
-            i.bx.bx-right-arrow-alt.work__icon
+            a.work__buttonseemore(href='/projects/LastDance' target='_blank')
+              | Voir plus 
+              i.bx.bx-right-arrow-alt.work__icon
         .work__card.mix.web
           img.work__img(src='/assets/img/remindr/remindr-preview-01.gif' alt='')
           h3.work__title Remindr
           p.work__subtitle
-            | Application web de rappels partagés entre utilisateurs
+            | Création d'une application web de rappels partagés entre utilisateurs
           .wbtn
-            a.work__button(href='https://remindr.demo.antoine-chabanel.fr/users/login' target='_blank')
+            a.work__buttonseemore(href='https://remindr.demo.antoine-chabanel.fr/users/login' target='_blank')
               | Demo 
               i.bx.bx-video-recording
-          a.work__buttonseemore(href='/projects/Remindr' target='_blank')
-            | Voir plus 
-            i.bx.bx-right-arrow-alt.work__icon
+            a.work__buttonseemore(href='/projects/Remindr' target='_blank')
+              | Voir plus 
+              i.bx.bx-right-arrow-alt.work__icon
         .work__card.mix.other
+          img.work__img(src='/assets/img/titanium/titanium-preview-01.gif' alt='')
+          h3.work__title Titanium
+          p.work__subtitle
+            | Création et administration de Titanium: serveur Minecraft de type Skyblock ouvert de 2018 à 2020.
+          .wbtn
+            a.work__buttonseemore(href='https://youtube.com' target='_blank')
+              | Visite guidée 
+              i.bx.bx-video-recording
+            a.work__buttonseemore(href='/projects/Titanium' target='_blank')
+              | Voir plus 
+              i.bx.bx-right-arrow-alt.work__icon
+
     //- .fll
     //-   a.button(href='/projects') Voir plus
     // =============== SKILLS ===============
