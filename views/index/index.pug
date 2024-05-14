@@ -6,6 +6,8 @@ block include
   link(rel='icon' type='image/png' sizes='16x16' href='assets/img/favicon_io/favicon-16x16.png')
   link(rel='manifest' href='assets/img/favicon_io/site.webmanifest')
 
+  // =============== JQUERY ===============
+  script(src='https://code.jquery.com/jquery-3.7.1.min.js')
   // =============== BOXICONS ===============
   link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
   // =============== SWIPER CSS ===============
@@ -15,8 +17,7 @@ block include
   // =============== TYPED ===============
   script(src='assets/js/typed.umd.js')
   // =============== IZIMODAL ===============
-  link(rel='stylesheet' href='assets/css/iziModal.min.css')
-  script(src='assets/js/iziModal.min.js')
+  link(rel='stylesheet' href='assets/css/iziModal.css')
   // =============== TIPPYJS ===============
   script(src='https://unpkg.com/@popperjs/core@2')
   script(src='https://unpkg.com/tippy.js@6')
@@ -97,6 +98,7 @@ block content
           a.button(href="/files/download/CV") Télécharger mon CV
       // =============== WORK ===============
     section#work.work.section
+      #modal
       span.section__subtitle Projets
       h2.section__title Mes travaux récents
       .work__filters
@@ -121,7 +123,7 @@ block content
             a.work__buttonseemore(href='https://www.youtube.com/watch?v=Og4vOZzyFlg' target="_blank")
               | Trailer 
               i.bx.bx-video-recording
-            a.work__buttonseemore(href='/projects/Neocity' target='_blank')
+            a.work__buttonseemore#Neocity
               | Voir plus 
               i.bx.bx-right-arrow-alt.work__icon
         .work__card.mix.videogame
@@ -133,7 +135,7 @@ block content
             a.work__buttonseemore(href='https://www.youtube.com/watch?v=nLD9zIZTlh0' target="_blank")
               | Trailer 
               i.bx.bx-video-recording
-            a.work__buttonseemore(href='/projects/LastDance' target='_blank')
+            a.work__buttonseemore#LastDance
               | Voir plus 
               i.bx.bx-right-arrow-alt.work__icon
         .work__card.mix.web
@@ -145,7 +147,7 @@ block content
             a.work__buttonseemore(href='https://remindr.demo.antoine-chabanel.fr/users/login' target='_blank')
               | Demo 
               i.bx.bx-video-recording
-            a.work__buttonseemore(href='/projects/Remindr' target='_blank')
+            a.work__buttonseemore#Remindr
               | Voir plus 
               i.bx.bx-right-arrow-alt.work__icon
         .work__card.mix.other
@@ -157,7 +159,7 @@ block content
             a.work__buttonseemore(href='https://youtube.com' target='_blank')
               | Visite guidée 
               i.bx.bx-video-recording
-            a.work__buttonseemore(href='/projects/Titanium' target='_blank')
+            a.work__buttonseemore#Titanium
               | Voir plus 
               i.bx.bx-right-arrow-alt.work__icon
 
@@ -312,6 +314,9 @@ block content
               label.contact__form-tag(for='') Message
               textarea.contact__form-input(name='' id='' cols='30' rows='10' placeholder='Write your message')
             button.button Send Message
+  //Scripts
+  // =============== IZIMODAL ===============
+  script(src='assets/js/iziModal.min.js')
 
 block scripts
   // =============== SCROLLREVEAL ===============

@@ -143,3 +143,40 @@ function goTo(elementId) {
       behavior: 'smooth'
     });
   }
+
+
+//IZI MODAL
+
+var currentProject = '';
+
+var modal = $('#modal').iziModal({
+    title: 'Détails du projet',
+    subtitle: '',
+    headerColor: '#242424',
+    fullscreen: true,
+
+    onOpening: function(modal){
+ 
+        modal.startLoading();
+ 
+        $.get('/projects/' + currentProject, function(data) {
+            $("#modal .iziModal-content").html(data);
+ 
+            modal.stopLoading();
+        });
+    }
+});
+
+const workButtonSeemore = document.querySelectorAll('.work__buttonseemore');
+
+workButtonSeemore.forEach((button) => {
+    // Ajoutez un écouteur d'événements click à chaque bouton
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        // Obtenez le nom du projet à partir de l'ID du bouton
+        currentProject = event.target.id;
+        
+        modal.iziModal('open');
+    });
+});

@@ -1,10 +1,16 @@
-extends ../layout
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    // =============== BOXICONS ===============
+    link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
+    // =============== SWIPER CSS ===============
+    link(rel='stylesheet' href='assets/css/swiper-bundle.min.css')
+    // =============== CSS PERSO ===============
+    link(rel='stylesheet' href='assets/css/styles.css')
 
-block content
-    | test
-
-block scripts
-    // =============== SCROLLREVEAL ===============
-    script(src='assets/js/scrollreveal.min.js')
-    // =============== MAIN JS ===============
-    script(src='assets/js/mainProjects.js')
+main.main
+    section#home.home
+        .home__container.container.grid
+            .home__data
+                h1(class='home__title') Bienvenue sur Neocity
