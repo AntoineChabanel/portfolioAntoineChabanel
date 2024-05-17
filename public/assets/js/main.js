@@ -119,7 +119,7 @@ themeButton.addEventListener('click', () => {
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
     distance: '60px',
-    reset: true,
+    reset: false,
     duration: 1000,
     delay:200,
 })
@@ -149,11 +149,15 @@ function goTo(elementId) {
 
 var currentProject = '';
 
+//sr.reveal(`.project_about_img, .project_about_h2, .project_about_li, .project_about_p, .project_about_img`, { origin: 'bottom' })
+
 var modal = $('#modal').iziModal({
     title: 'Détails du projet',
     subtitle: '',
-    headerColor: '#242424',
-    fullscreen: true,
+    width: 1200,
+    padding: 0,
+    length: 0,
+    background: null,
 
     onOpening: function(modal){
  
@@ -161,7 +165,11 @@ var modal = $('#modal').iziModal({
  
         $.get('/projects/' + currentProject, function(data) {
             $("#modal .iziModal-content").html(data);
- 
+            //sync with current theme and css variables
+            let currentColor = getComputedStyle(document.body).getPropertyValue('--body-color').trim();
+            $('#modal').iziModal('setBackground', currentColor);
+            //header color
+            $('#modal .iziModal-header').css('background-color', currentColor);
             modal.stopLoading();
         });
     }
@@ -175,8 +183,10 @@ workButtonSeemore.forEach((button) => {
         event.preventDefault();
 
         // Obtenez le nom du projet à partir de l'ID du bouton
-        currentProject = event.target.id;
+        let projectButton = event.target.closest('.work__buttonseemore');
+        currentProject = projectButton.id;
         
         modal.iziModal('open');
     });
 });
+

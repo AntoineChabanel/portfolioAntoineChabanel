@@ -1,0 +1,113 @@
+/*=============== PROJECT CONTENT ===============*/
+
+/*=============== HEADINGS ===============*/
+.project_about_h1 {
+    font-size: var(--h1-font-size);
+    color: var(--first-color);
+    font-weight: var(--font-semibold);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .project_about_h2 {
+    font-size: var(--h2-font-size);
+    color: var(--first-color);
+    font-weight: var(--font-semibold);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .project_about_h3 {
+    font-size: var(--h3-font-size);
+    color: var(--first-color);
+    font-weight: var(--font-semibold);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  /*=============== PARAGRAPHS ===============*/
+  .project_about_p {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+  }
+  
+  /*=============== LINKS ===============*/
+  .project_about_a {
+    color: var(--first-color);
+    text-decoration: underline;
+    transition: color 0.4s;
+    margin: 2.5rem;
+  }
+  
+  .project_about_a:hover {
+    color: var(--first-color-alt);
+  }
+  
+  /*=============== LIST ITEMS ===============*/
+  .project_about_li {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-left: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /*=============== CONTAINERS ===============*/
+  .project_about_container {
+    max-width: 968px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /*=============== GRID ===============*/
+  .project_about_grid {
+    display: grid;
+    gap: 1.25rem;
+  }
+  
+  /*=============== SECTIONS ===============*/
+  .project_about_section {
+    padding: 4.5rem 0 1rem;
+  }
+  
+  /*=============== IMAGES ===============*/
+  .project_about_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /*=============== BUTTONS ===============*/
+  .project_about_button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--body-color);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: var(--font-medium);
+    transition: background-color 0.4s, color 0.4s;
+  }
+  
+  .project_about_button:hover {
+    background-color: var(--first-color-alt);
+    color: var(--body-color);
+  }
+  
+  /*=============== ICONS ===============*/
+  .project_about_icon {
+    font-size: 1.5rem;
+    color: var(--first-color);
+    margin-bottom: 0.5rem;
+  }
+  
