@@ -1130,7 +1130,7 @@ body.light-theme{
   }
 
   .contact__container{
-    grid-template-columns: repeat(2, max-content);
+    /*grid-template-columns: repeat(2, max-content);*/
     justify-content: center;
     column-gap: 3rem;
   }

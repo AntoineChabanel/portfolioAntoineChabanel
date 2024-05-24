@@ -17,6 +17,36 @@ head
             content: 'Une classe est un modèle qui définit les variables et les méthodes communes à tous les objets d\'un certain type.',
             placement: 'top',
         });
+        tippy('#unity', {
+            theme: 'translucent',
+            content: 'Unity est un moteur de jeu multiplateforme développé par Unity Technologies.',
+            placement: 'top',
+        });
+        tippy('#c-sharp', {
+            theme: 'translucent',
+            content: 'C# est un langage de programmation orienté objet développé par Microsoft.',
+            placement: 'top',
+        });
+        tippy('#visual-paradigm', {
+            theme: 'translucent',
+            content: 'Visual Paradigm est un logiciel de modélisation de diagrammes UML.',
+            placement: 'top',
+        });
+        tippy('#blender', {
+            theme: 'translucent',
+            content: 'Blender est un logiciel de modélisation 3D.',
+            placement: 'top',
+        });
+        tippy('#git', {
+            theme: 'translucent',
+            content: 'Git est un logiciel de gestion de versions décentralisé.',
+            placement: 'top',
+        });
+        tippy('#gitlab', {
+            theme: 'translucent',
+            content: 'Gitlab est une plateforme de développement logiciel qui fournit des outils pour la gestion de code source, l\'intégration/déploiement continu.',
+            placement: 'top',
+        });
         tippy('#visual-studio', {
             theme: 'translucent',
             content: 'IDE',
@@ -49,23 +79,27 @@ main.main
     p.project_about_p Nous avons ensuite réfléchi au but et au sens de notre jeu: nous voulions mettre l’accent sur les problématiques environnementales, car cela est un sujet urgent et ayant de l’importance à nos yeux. Le jeu étant un City Builder, l’exercice était de sensibiliser les joueurs.euses sur ces problématiques, tout en ayant pour résultat un jeu jouable, facile à comprendre et amusant.
     p.project_about_p Après avoir réfléchi au mécanismes principaux du jeu, nous nous sommes lancés dans la conception objet du jeu: le but était de séparer au maximum les préoccupations, et éviter les dépendances entre les différentes parties du programme, pour pouvoir travailler efficacement dans le temps imparti.
     p.project_about_p Je me suis aussi occupé de l’hébergement du projet Git avec 
-        a(href="https://gitlab.com" target="_blank") Gitlab 
+        a.project_about_a(href="https://gitlab.com" target="_blank" id="gitlab") Gitlab 
+            span(style="font-size: smaller; vertical-align: super;") &#9432;
         | sur mon serveur Linux.
     h3.project_about_h3 11-23 janvier: Le plus gros du développement
     p.project_about_p Après avoir longuement réfléchi sur le but et les mécanismes du jeu, nous avons commencé à programmer.
     p.project_about_p Dans Neocity, les bâtiments sont organisés selon un système de plateau en deux dimensions. Un bâtiment peut occuper une ou plusieurs cases. Certaines zones sont inaccessibles par défaut et peuvent être débloquées par le joueur plus tard.
         br
-        | Tandis que mes camarades travaillaient sur l’IU, la sauvegarde, et les statistiques, je me suis occupé de programmer les bases de ce plateau de jeu, en respectant 
-        a(href="https://fr.wikipedia.org/wiki/Patron_de_conception" target="_blank" id="design-pattern") design patterns
+        | Tandis que mes camarades travaillaient sur l’IU, la sauvegarde, et les statistiques, je me suis occupé de programmer les bases de ce plateau de jeu, en respectant les 
+        a.project_about_a(href="https://fr.wikipedia.org/wiki/Patron_de_conception" target="_blank" id="design-pattern") design patterns
+            span(style="font-size: smaller; vertical-align: super;") &#9432; 
         br
         | et en général la conception que nous nous étions imposée.
     p.project_about_p J’ai aussi travaillé sur l’intégration de la manette, le menu, les cameras, les états du jeu (
-        a(href="https://fr.wikipedia.org/wiki/Machine_%C3%A0_%C3%A9tats" target="_blank" id="state-machine") State Machine Wikipedia
-        | ), l’intégration de la musique, la lumière, les classes (
-        a(href="https://fr.wikipedia.org/wiki/Classe_(informatique)" target="_blank" id="class") Classe wikipédia
-        | ) de base du jeu…
+        a.project_about_a(href="https://gamedevbeginner.com/state-machines-in-unity-how-and-when-to-use-them/" target="_blank" id="state-machine" ) State Machine Wikipedia
+            span(style="font-size: smaller; vertical-align: super;") &#9432;
+        | ), l’intégration de la musique, la lumière, 
+        a.project_about_a(href="https://fr.wikipedia.org/wiki/Classe_(informatique)" target="_blank" id="class") les classes
+            span(style="font-size: smaller; vertical-align: super;") &#9432; 
+        | de base du jeu, les évènements…
     p.project_about_img
-        a(href="Neocity%20fe06f404b80b491d8f0c39f227fddbdf/Untitled.png" target="_blank")
+        a.project_about_a(href="Neocity%20fe06f404b80b491d8f0c39f227fddbdf/Untitled.png" target="_blank")
             img(src="Neocity%20fe06f404b80b491d8f0c39f227fddbdf/Untitled.png", alt="Image 2", class="project_about_img")
     h3.project_about_h3 Jusqu’en avril 2024: Correction de bugs, ajout des réformes et des catastrophes naturelles 
     p.project_about_p Nous avons eu l’occasion de “peaufiner” notre projet avant la présentation et le rendu finaux. 
@@ -77,26 +111,38 @@ main.main
     p.project_about_p Personnellement, dans cette période, j’ai été polyvalent: Implémentation des catastrophes et créations des animations/VFX, résolution de bugs sur tout les aspects du jeu, préparation à la première release…
     h2.project_about_h2 Technologies utilisées
     p.project_about_p Nous avons utilisé différents logiciels, technologies, et langages pour développer Neocity
-    p.project_about_p 
-        a(href="https://unity.com" target="_blank") Unity 
-        | (moteur de jeu)
-        br
-        | C# (Langage de programmation)
-        br
-        | 
-        a(href="https://visualstudio.microsoft.com" target="_blank" id="visual-studio") Visual Studio 
-        | (IDE)
-        br
-        | Visual Paradigm (Logiciel de conception de diagrammes UML (etc))
-        br
-        | Blender (Logiciel de modélisation 3D)
-        br
-        | Git (Utilisé entre autres pour le versionnage et le partage du code)
-        br
-        | 
-        a(href="https://about.gitlab.com" target="_blank") Gitlab, hébergé 
-        | (Plateforme de développement logiciel qui fournit des outils pour la gestion de code source, l'intégration/déploiement continu.)
-        br
+    ul.bulleted-list.project_about_li
+        li(style="list-style-type:disc")
+            a.project_about_a(href="https://unity.com" target="_blank" id="unity") Unity
+                span(style="font-size: smaller; vertical-align: super;") &#9432;
+    ul.bulleted-list.project_about_li
+        li(style="list-style-type:disc")
+            a.project_about_a(href="https://fr.wikipedia.org/wiki/C_Sharp" target="_blank" id="c-sharp") C#
+                span(style="font-size: smaller; vertical-align: super;") &#9432;
+    ul.bulleted-list.project_about_li
+        li(style="list-style-type:disc")
+            a.project_about_a(href="https://visualstudio.microsoft.com" target="_blank" id="visual-studio") Visual Studio
+                span(style="font-size: smaller; vertical-align: super;") &#9432;
+            | (un 
+            a.project_about_a(href="https://fr.wikipedia.org/wiki/Environnement_de_développement" target="_blank" id="ide") IDE
+                span(style="font-size: smaller; vertical-align: super;") &#9432;
+            | compatible avec C#)
+    ul.bulleted-list.project_about_li
+        li(style="list-style-type:disc")
+            a.project_about_a(href="https://www.visual-paradigm.com" target="_blank" id="visual-paradigm") Visual Paradigm
+                span(style="font-size: smaller; vertical-align: super;") &#9432;
+    ul.bulleted-list.project_about_li
+        li(style="list-style-type:disc")
+            a.project_about_a(href="https://fr.wikipedia.org/wiki/Blender" target="_blank" id="blender") Blender
+                span(style="font-size: smaller; vertical-align: super;") &#9432;
+    ul.bulleted-list.project_about_li
+        li(style="list-style-type:disc")
+            a.project_about_a(href="https://git-scm.com" target="_blank" id="git") Git
+                span(style="font-size: smaller; vertical-align: super;") &#9432;
+    ul.bulleted-list.project_about_li
+        li(style="list-style-type:disc")
+            a.project_about_a(href="https://about.gitlab.com" target="_blank" id="gitlab") Gitlab (hébergé)
+                span(style="font-size: smaller; vertical-align: super;") &#9432;
     h2.project_about_h2 Partis pris: numérique responsable…
     p.project_about_p Le numérique responsable est un terme vaste qui comprend non seulement des problématiques environnementales mais aussi sociales et éthiques.
     p.project_about_p Neocity se veut d’être un jeu qui aborde des questions environnementales (comme les émissions de gaz à effet de serre). Le joueur/la joueuse voit ses choix avoir un impact sur l’environnement, et est contraint de construire sa ville de façon à réduire la pollution: cela encourage à la réflexion sur ces enjeux. 
@@ -112,12 +158,13 @@ main.main
     ul.bulleted-list.project_about_li
         li(style="list-style-type:disc") Dépenses (les loisirs sont représentés dans le jeu et permettent d’améliorer le bonheur)
     figure.image.project_about_img
-        a(href="Neocity%20fe06f404b80b491d8f0c39f227fddbdf/Untitled.png" target="_blank")
+        a.project_about_a(href="Neocity%20fe06f404b80b491d8f0c39f227fddbdf/Untitled.png" target="_blank")
             img(src="Neocity%20fe06f404b80b491d8f0c39f227fddbdf/Untitled.png", alt="Image 3", class="project_about_img")
     h2.project_about_h2 …et accessibilité…
     p.project_about_p Aussi, le but principal affiché d’avoir intégré le support manette à Neocity était de garantir une expérience fluide aux joueurs.es en situation de handicap moteur, qui peuvent utiliser des technologies telles que le “Xbox adaptive controller” pour émuler une manette, et ainsi pouvoir jouer au jeu.
     p.project_about_p Enfin, nous avons utilisé le pipeline de rendu “Universal Render Pipeline (URP)” (
-        a(href="https://fr.wikipedia.org/wiki/Universal_Render_Pipeline" target="_blank" id="urp") Universal Render Pipeline 
+        a.project_about_a(href="https://unity.com/srp/universal-render-pipeline" target="_blank" id="urp") Universal Render Pipeline 
+            span(style="font-size: smaller; vertical-align: super;") &#9432;
         | ), le pipeline le moins énergivore pour permettre au plus de monde possible de jouer à Neocity, peu importe la plateforme ou la configuration matérielle. Nous avons prévu d’adapter le jeu sur mobile.
         br
         | Nous avons aussi décider d’adopter le style Low Poly pour alléger la charge de travail du processeur graphique (GPU).

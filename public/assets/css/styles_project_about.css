@@ -35,14 +35,14 @@
     line-height: 1.6;
     margin-right: 2.5rem;
     margin-left: 2.5rem;
+    margin-bottom: 2.5rem;
   }
   
   /*=============== LINKS ===============*/
   .project_about_a {
     color: var(--first-color);
-    text-decoration: underline;
+    text-decoration: bold;
     transition: color 0.4s;
-    margin: 2.5rem;
   }
   
   .project_about_a:hover {
@@ -54,7 +54,7 @@
     font-size: var(--normal-font-size);
     color: var(--text-color);
     line-height: 1.6;
-    margin-left: 2.5rem;
+    margin-left: 5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
