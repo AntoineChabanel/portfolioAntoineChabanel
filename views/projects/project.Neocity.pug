@@ -9,7 +9,7 @@ head
         });
         tippy('#state-machine', {
             theme: 'translucent',
-            content: 'à voir',
+            content: 'Cela représente l\'état dans lequel se trouve un objet à un moment donné, et les transitions possibles vers d\'autres états.',
             placement: 'top',
         });
         tippy('#class', {
@@ -49,7 +49,7 @@ head
         });
         tippy('#visual-studio', {
             theme: 'translucent',
-            content: 'IDE',
+            content: 'Visual Studio est un IDE développé par Microsoft compatible avec C sharp.',
             placement: 'top',
         });
         tippy('#urp', {
@@ -68,7 +68,7 @@ main.main
         | Vous devez garder un œil sur vos statistiques (ressources, humeur des habitants.es, CO2 émis) en agençant les bâtiments intelligemment et en faisant des choix politiques, afin d’éviter les catastrophes naturelles et le malheur des habitants.es.
         br
     p.project_about_p
-        strong Ce jeu a participé au concours de GameOnly sur LinkedIn et a décroché la 3ème place.
+        a.project_about_a(href="https://www.linkedin.com/posts/game-only_accessibilitaez-numaezriqueresponsable-jeuvideo-activity-7191793951626956801-RGxt/?utm_source=share&utm_medium=member_desktop" target="_blank") Ce jeu a participé au concours de GameOnly sur LinkedIn et a décroché la 3ème place.
     img(src="assets/img/neocity/neocity-preview-01.gif", alt="Gif du trailer de Neocity", class="project_about_gif", href="assets/img/neocity/neocity-preview-01.gif", target="_blank")
     h2.project_about_h2 Contexte
     p.project_about_p
@@ -123,8 +123,7 @@ main.main
             a.project_about_a(href="https://visualstudio.microsoft.com" target="_blank" id="visual-studio") Visual Studio
                 span(style="font-size: smaller; vertical-align: super;") &#9432;
             | (un 
-            a.project_about_a(href="https://fr.wikipedia.org/wiki/Environnement_de_développement" target="_blank" id="ide") IDE
-                span(style="font-size: smaller; vertical-align: super;") &#9432;
+            a.project_about_a(href="https://fr.wikipedia.org/wiki/Environnement_de_développement" target="_blank") IDE 
             | compatible avec C#)
     ul.bulleted-list.project_about_li
         li(style="list-style-type:disc")
