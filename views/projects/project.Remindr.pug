@@ -1,0 +1,91 @@
+doctype html
+head
+    link(rel="stylesheet", href="assets/css/styles_project_about.css")
+    script(type="text/javascript").
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/androidstudio.css")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js")
+
+
+main.main
+    header
+    h1.project_about_h1 Remindr
+    p.project_about_p
+    div
+    p.project_about_p
+        strong Remindr est une application web de rappels partagés entre utilisateurs. Chaque utilisateur peut créer des groupes et y inviter d’autres utilisateur.ice.s. Dans ces groupes, ils peuvent créer des rappels.
+    img(src="assets/img/remindr/remindr-preview-02.png", alt="Remindr", class="project_about_img")
+    h2.project_about_h2 Contexte
+    p.project_about_p J’ai créé Remindr dans le cadre d’un projet de découverte de Node.JS donné en cours du BUT Informatique. Le but était de créer une application de gestion de rappels basée sur des groupes d’utilisateur.ice.s.
+    p.project_about_p Le cahier des charges était:
+    ul.bulleted-list.project_about_li
+        li(style="list-style-type:disc") Authentification de comptes utilisateurs
+        li(style="list-style-type:disc") Gestion de groupes
+        li(style="list-style-type:disc") Création/Gestion des rappels
+        li(style="list-style-type:disc") Tableau de bord
+        li(style="list-style-type:disc") Outils imposés (voir Technologies utilisées)
+
+    p.project_about_p Étant mon premier projet en Node.JS, j’ai dû tout d’abord me familiariser avec cet outil. Jusqu’à là, je n’avais utilisé que PHP pour la partie back-end. Il a donc fallu commencer par la partie conception.
+    h2.project_about_h2 Technologies utilisées
+    ul.bulleted-list.project_about_li
+        li(style="list-style-type:disc") Node.JS (back-end) (ce site l’utilise)
+        li(style="list-style-type:disc") Express.JS (framework) (ce site l’utilise aussi)
+        li(style="list-style-type:disc") Handlebars (vues)
+        li(style="list-style-type:disc") Prisma (modèles)
+        li(style="list-style-type:disc") MySQL (base de données)
+        li(style="list-style-type:disc") Bootstrap (Styles CSS)
+    img(src="assets/img/remindr/remindr-preview-03.png", alt="Remindr", class="project_about_img")
+    h2.project_about_h2 Modèle Vue Contrôleur, avec des routeurs
+    p.project_about_p Notions:
+    ul.bulleted-list.project_about_li
+        li(style="list-style-type:disc")
+            a.project_about_a(href="https://fr.wikipedia.org/wiki/Modèle-vue-contrôleur" target="_blank") Modèle Vue Contrôleur
+        li(style="list-style-type:disc")
+            a.project_about_a(href="https://expressjs.com/fr/starter/basic-routing.html" target="_blank") Routeurs
+    p.project_about_p Avant de coder, j’ai du mettre en place la conception de l’application. Le design pattern (patron de conception) nommé Modèle Vue Contrôleur est utilisé pour séparer les préoccupations et assurer l’indépendance des différentes parties de l’application.
+    //- p.project_about_p
+    //-     | (
+    //-     em Expliquations
+    //-     | )
+    ul.bulleted-list.project_about_li
+        li(style="list-style-type:disc") Le modèle est la partie communication à la base de données
+        li(style="list-style-type:disc") Il est utilisé par le contrôleur qui récupère ces données, et peut les afficher: il fait le métier
+        li(style="list-style-type:disc") Pour les afficher, la vue intervient.
+    br
+    p.project_about_p L’utilisateur peut aussi effectuer des actions qui seront envoyées au contrôleur.
+    p.project_about_p Le MVC n’est pas restrictif et peut acceuillir d’autres type d’objets, comme les routeurs.
+    p.project_about_p Les routeurs permettent de diriger l’utilisateur en appliquant des 
+        a.project_about_a(href="https://expressjs.com/en/guide/using-middleware.html" target="_blank") “middlewares”
+    p.project_about_p Voilà un extrait de code simplifié pour notre cas:
+    pre.project_about_precode
+        code.language-javascript
+            | //Index.js
+            | //[...]
+            | //Ce routeur écoutera sur https://mon.site/users
+            | app.use('/users', fileRtrUsers.rtrUsers);
+            | //[...]
+    pre.project_about_precode
+        code.language-javascript
+            | //userRouter.js
+            | //[...]
+            | //Création du routeur utilisateur
+            | const rtrUsers = express.Router();
+            | //[...]
+            | //Expliqué ci-dessous
+            | rtrUsers.get('/', fileAuthMiddlewares.NecessitateAuth, userController.showIndex);
+            | //[...]
+    p.project_about_p Ici, quand le site reçoit la requête GET de l’utilisateur (l’utilisateur veut simplement afficher le site, donc son navigateur envoie une requête GET pour se faire), le routeur se charge de diriger l’utilisateur vers l’index du tableau de bord.
+    p.project_about_p Seulement, si l’utilisateur n’était pas connecté, ce serait insensé.
+    p.project_about_p
+        | C’est là qu’intervient un middleware (fonction qui se met au millieu, en passerelle), qui va vérifier si l’utilisateur n’est pas connecté, et le cas échéant, va annuler l’éxécution du middleware suivant, et rediriger l’utilisateur vers la page de login.
+    //- p.project_about_p
+    //-     | (
+    //-     em Fin expliquations
+    //-     | )
+    h2.project_about_h2 Démarche réflexive
+    p.project_about_p Le but de ce projet était de satisfaire le cahier des charges donné. C’était un cahier des charges clair et qui a été fait pour nous familiariser avec les outils imposés. 
+    p.project_about_p Après sa réalisation, j’ai rédigé une auto-critique sur des aspects techniques qui auraient pu être améliorés (voir 
+        a.project_about_a(href="https://github.com/Niro2899/RemindrAdrienAntoine/blob/main/ReflexiveApproach_fr.md") Auto-critique technique
+        | ).
+    p.project_about_p Ce projet m’a ouvert sur l’utilisation du JavaScript en backend avec NodeJS et j’ai été surpris par tout les modules qui existent, je ne savais pas que l’on pouvait autant de choses aussi facilement. Plus tard j’ai aussi découvert les possibilités qu’offrent JavaScript en front-end avec de nombreuses bibliothèques. Je suis heureux d’avoir appris comment fonctionne Node.JS, car même si je souhaite m’orienter dans le domaine du développement de jeu vidéo, je suis curieux de me diversifier.
+    img(src="assets/img/remindr/remindr-preview-04.png", alt="Remindr", class="project_about_img")
+    img(src="assets/img/remindr/remindr-preview-01.gif", alt="Remindr", class="project_about_gif", style="width: 50%;")

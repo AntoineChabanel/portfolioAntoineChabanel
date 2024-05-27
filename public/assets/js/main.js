@@ -165,6 +165,9 @@ var modal = $('#modal').iziModal({
  
         $.get('/projects/' + currentProject, function(data) {
             $("#modal .iziModal-content").html(data);
+            if (hljs) {
+                hljs.highlightAll();
+            }
             //sync with current theme and css variables
             let currentColor = getComputedStyle(document.body).getPropertyValue('--body-color').trim();
             $('#modal').iziModal('setBackground', currentColor);

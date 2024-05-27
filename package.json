@@ -4,7 +4,8 @@
   "description": "Portfolio website for Antoine Chabanel",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "prod": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -14,12 +15,12 @@
     "portfolio",
     "website"
   ],
-  "author": "vaibhav aswal",
+  "author": "Antoine Chabanel, Vaibhav aswal",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/VaibhavAswal/portfolioWebsite/issues"
+    "url": "https://github.com/Niro2899/portfolioAntoineChabanel/issues"
   },
-  "homepage": "https://github.com/VaibhavAswal/portfolioWebsite#readme",
+  "homepage": "https://github.com/Niro2899/portfolioAntoineChabanel",
   "dependencies": {
     "axios": "^0.25.0",
     "body-parse": "^0.1.0",

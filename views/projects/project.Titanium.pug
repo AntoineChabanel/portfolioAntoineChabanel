@@ -2,9 +2,34 @@ doctype html
 head
     link(rel="stylesheet", href="assets/css/styles_project_about.css")
     script(type="text/javascript").
-        tippy('#design-pattern', {
+        tippy('#lfgcraft', {
             theme: 'translucent',
-            content: 'Un design pattern est une solution générale réutilisable à un problème qui se présente souvent lors de la conception de logiciels.',
+            content: 'C’était un serveur ouvert en 2017 et mon premier gros projet informatique. Je n’avais que 12/13 ans et c’est en parti celui-ci qui m’a donné goût à l’informatique. Étant assez jeune et seul pour le gérer, j’ai décidé de le fermer au bout de trois semaines.',
+            placement: 'top',
+        });
+        tippy('#vanilla', {
+            theme: 'translucent',
+            content: 'Officiel, non modifié. Logiciel de base, sans ajouts.',
+            placement: 'top',
+        });
+        tippy('#build-lobby', {
+            theme: 'translucent',
+            content: 'Build du lobby (hub) du serveur',
+            placement: 'top',
+        });
+        tippy('#build-skyblock', {
+            theme: 'translucent',
+            content: 'Build du spawn du Skyblock',
+            placement: 'top',
+        });
+        tippy('#open01', {
+            theme: 'translucent',
+            content: 'Ouverture du serveur en direct (2018), 30 personnes sont présentes',
+            placement: 'top',
+        });
+        tippy('#souvenir', {
+            theme: 'translucent',
+            content: 'Souvenir du serveur avant son ouverture, avec les vieilles constructions',
             placement: 'top',
         });
 
@@ -15,4 +40,204 @@ main.main
         strong Titanium est un serveur Minecraft communautaire (serveur sur lequel les joueurs peuvent se connecter et jouer à un/des jeux/mini-jeux) ouvert à partir de l’été 2018 jusqu’en 2020.
         | C’était un serveur comprenant le mode de jeu Skyblock
         | (le joueur/la joueuse-tout.e seul.e ou avec des amis.es-commence sur une petite île dans les airs avec peu de ressources et évolue pour agrandir son île)
-    .iframe(width="560" height="315" src="https://www.youtube.com/embed/GQBilaLL39E?si=_IEO8UmFMjRiNmCW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
+    iframe.project_about_youtubeintegration(width="560" height="315" src="https://www.youtube.com/embed/GQBilaLL39E?si=_IEO8UmFMjRiNmCW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
+
+    p.project_about_p
+        | Titanium est un serveur Minecraft communautaire (serveur sur
+        | lequel les joueurs peuvent se connecter et jouer à un/des jeux/mini-jeux)
+        | ouvert à partir de l’été 2018 jusqu’en 2020. C’était un serveur comprenant le
+        | mode de jeu Skyblock (le joueur/la joueuse-tout.e seul.e ou avec des
+        | amis.es-commence sur une petite île dans les airs avec peu de ressources et
+        | évolue pour agrandir son île)
+
+    h1.project_about_h1 Titanium, c’est quoi?
+
+    p.project_about_p
+        | Titanium est l’un de mes tout premiers projets
+        | informatique: après la fermeture de mon premier serveur 
+        a.project_about_a(id="lfgcraft") «LFGcraft» 
+           span(style="font-size: smaller; vertical-align: super;") &#9432; 
+        | , j’ai décidé de repartir de zéro et de créer un nouveau
+        | serveur. Les objectifs étaient de créer une expérience de jeu légère en
+        | ressources, cohérente, personnalisée et innovante par rapport au Skyblock
+        | classique. J’ai travaillé avec l’aide d’amis rencontrés durant la création de
+        | LFGcraft.
+
+    p.project_about_p
+        | Ouvrir un serveur Minecraft demande beaucoup de préparation
+        | sur beaucoup d’aspects et peut prendre plusieurs mois. Il faut d’abord
+        | construire les mondes du serveur pour que l’expérience visuelle soit unique et
+        | agréable. Dans le même temps, il faut mettre en place le «back-end»
+        | (le comportement) du serveur et des jeux qu’il contient.
+
+    br
+
+    p.project_about_p
+        | Il faut réfléchir à une stratégie de communication et à la création du site
+        | web.
+
+    h1.project_about_h1 «Serveur»… Qu’est-ce que ça veut dire au fait?
+
+    p.project_about_p
+        | Sur le jeu Minecraft, quand le joueur (client) veut jouer en
+        | multijoueur, il se rentre une adresse IP pour se connecter à un serveur.
+        | Derrière cette adresse se trouve un serveur qui exécute le serveur Minecraft. À
+        | la base, le logiciel de serveur Minecraft dit 
+        a.project_about_a(href="https://fr.wikipedia.org/wiki/Logiciel_vanilla" target="_blank" id="vanilla") «vanilla» 
+           span(style="font-size: smaller; vertical-align: super;") &#9432; 
+        | était un
+        | logiciel conçu pour héberger une simple partie multijoueur entre amis. La
+        | communauté en a fait des 
+        a.project_about_a(href="https://fr.wikipedia.org/wiki/Fork_(développement_logiciel)" target="_blank") forks 
+        | (dont parmis les plus célèbres 
+        a.project_about_a(href="https://dev.bukkit.org" target="_blank") Bukkit 
+        | , puis 
+        a.project_about_a(href="https://dev.bukkit.org" target="_blank") Spigot 
+        | et 
+        a.project_about_a(href="https://papermc.io" target="_blank") Paper 
+        | , ou 
+        a.project_about_a(href="https://github.com/SpigotMC/BungeeCord" target="_blank") Bungeecord
+        | ) qui sont plus orientés vers le grand public,
+        | avec la possibilité de créer des «plug-ins» grâce à leurs API (ou
+        | d’importer ceux créés par la communauté) qui modifient le comportement du
+        | serveur, pour ainsi créer des jeux personnalisés.
+
+    br
+
+    p.project_about_p
+        | Nous parlons donc de «serveur» Minecraft pour désigner le logiciel
+        | «côté serveur» exécuté sur une machine avec lequel les logiciels
+        | clients (copies du jeu Minecraft) communiquent.
+
+    p.project_about_p 
+
+    h1.project_about_h1 Comment Titanium a-t-il été créé ?
+
+    h2.project_about_h2 Première étape: le back-end et le jeu Skyblock
+
+    p.project_about_p
+        | Il est possible de développer ses propres plug-ins ou bien d’en installer déjà
+        | existants et configurables.
+
+    p.project_about_p
+        | Nous avons majoritairement opté pour cette option car nous
+        | pensions que c’était le choix le plus judicieux étant donné la petite taille de
+        | notre équipe et notre inexpérience dans la programmation et dans l’API de
+        | Bukkit à ce moment-là.
+
+    h4.project_about_h4 Plug-in?
+
+    p.project_about_p
+        | Un plug-in est une extension
+        | qui se branche au logiciel serveur (Paper) qui permet d’ajouter des
+        | comportements, des commandes sur le jeu…
+        br
+        | Par exemple, le plugin de Skyblock (ASkyblock) sert au joueur à créer son île,
+        | inviter des amis, relever des défis sur son île…
+        br
+        | Autres exemples:
+        br
+        | Le plugin de gestion des mondes (MultiWorld) qui permet au serveur de gérer
+        | plusieurs mondes (le monde contenant les îles des joueurs, les mondes avec les
+        | zones communes, les mondes évenements…)
+        br
+        | Le plugin de gestion des permissions (LuckPerms) qui permet de gérer qui a
+        | accès à certaines commandes/certains comportements.
+    
+
+    p.project_about_p
+        | Le but était d’installer et de configurer des plugins (pour
+        | un seul cela pouvait quelques minutes à plusieurs heures selon la taille de la
+        | configuration)
+
+    p.project_about_p J’ai personnellement beaucoup contribué à cette étape.
+
+    p.project_about_p
+        | Nous suivions notre idée de base de faire un
+        | Skyblock,et nous avons installé des dizaines de plugins mais pour plus
+        | d’originalité, le travail était aussi d’effectuer une veille constante sur les
+        | nouveaux plugins et les plugins existants, afin de rajouter des fonctionnalités
+        | inédites à notre jeu.
+
+    h2.project_about_h2 Pendant ce temps… les constructions
+
+    p.project_about_p
+        | Pour que l’expérience visuelle soit unique et agréable, il
+        | fallait des constructions uniques au serveur et dans le thème. Des
+        | contributeurs qui étaient spécialistes de la construction de mondes dans
+        | Minecraft (aussi appelés « builders») nous ont proposé leur aide dans
+        | cette tâche.
+
+    img.project_about_img(src="assets/img/titanium/titanium-build-01.png", alt="Build Lobby", class="project_about_img" id="build-lobby")
+    img.project_about_img(src="assets/img/titanium/titanium-build-02.png", alt="Build Spawn Skyblock", class="project_about_img" id="build-skyblock")
+
+    h2.project_about_h2 Notre plan de communication
+
+    p.project_about_p
+        | En parallèle, à cette époque, je faisais des vidéos sur
+        | YouTube, dont beaucoup qui tournaient autour du jeu Minecraft. J’avais une
+        | communauté grandissante de plusieurs centaines/milliers de personnes:
+        | grâce à cela nous avons pu faire la publicité de notre serveur.
+        br
+        | Pour aller plus loin, nous avons aussi inscrit notre serveur sur des listes
+        | publiques de serveur qui sont très utilisées par les joueurs en quête de
+        | nouveaux serveurs.
+
+    h2.project_about_h2 Quand tout était prêt… le jour J est arrivé!
+
+    p.project_about_p
+        | Le 30 juillet 2018 à 15 heures pile, le serveur a ouvert au
+        | public. Cette ouverture a été un succès inattendu pour nous car nous avons eu
+        | des dizaines de joueurs connectés simultanément à l’ouverture.
+
+    img.project_about_img(src="assets/img/titanium/titanium-open-01.png", alt="Ouverture du serveur en direct, 30 personnes sont présentes", class="project_about_img" id="open01")
+
+    p.project_about_p
+        br
+        | Après cela, nous avons maintenu le serveur avant de décider de sa fermeture en
+        | 2020, car nous manquions de temps et de ressources pour le continuer.
+
+    p.project_about_p 
+
+    p.project_about_p 
+
+    h2.project_about_h2 Qu’est-ce que tout ça a à voir avec mon projet ? Démarche réflexive
+
+    p.project_about_p
+        | Le but de Titanium était de créer une expérience de jeu
+        | légère en ressources, cohérente, personnalisée et innovante par rapport au
+        | Skyblock classique, tout ça sans modder le jeu client (le jeu des joueurs),
+        | pour le rendre accessible à tout le monde, même ceux qui ne savent pas
+        | installer de mods.
+        br
+        | Je pense que nous avons réussi cet objectif car nous avons intégré beaucoup
+        | d’éléments de gameplay supplémentaires, tout en organisant des évènements sur
+        | le serveur (je me souviens que nous avions fait une invasion alien avec des
+        | objets spéciaux à récolter, des évènements pour l’hiver etc…)
+        br
+        | Cependant, nous étions jeunes (13-14 ans): nous n’avions parfois pas le
+        | recul nécessaire pour gérer des situations compliquées entre les joueurs ou les
+        | conflits entre collaborateurs, et nous ne pouvions pas forcément être
+        | indépendant économiquement, ce qui a beaucoup freiné le développement du
+        | serveur.
+
+    p.project_about_p
+        | Malgré cela, je suis fier de ce que j’ai accompli sur ce
+        | serveur car j’ai été à l’initiative du projet et il a pris une ampleur que je
+        | n’attendais pas.
+        br
+        | C’est LE projet qui m’a orienté vers un bac technologique puis un BUT pour me
+        | diriger dans l’informatique. Je n’ai pas codé pour ce projet, mais peu
+        | importe: c’est la première fois que j’ai pu me former un esprit technique
+        | car cela m’a demandé des compétences en réseau, en développement web HTML/CSS,
+        | en hébergement de serveur (sécurisé), en optimisation et en cohérence de
+        | configuration des plugins choisis, sans compter le travail en équipe et
+        | l’ouverture à la critique.
+
+    p.project_about_p
+        br
+        | Remerciements à Mica, Théo, Bowser, Valentin, ThisBlue, à
+        | tous les autres contributeurs et à toute la communauté de Titanium sans qui
+        | cette expérience n’aurait pas été possible.
+
+    img(src="assets/img/titanium/titanium-build-03.png", alt="Souvenir du serveur", class="project_about_img", id="souvenir")
