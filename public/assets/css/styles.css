@@ -570,7 +570,7 @@ body.light-theme{
 
 .skills__groups{
   display: grid;
-  align-content: flex-start;
+  align-content: flex;
   row-gap: 1rem;
 }
 
