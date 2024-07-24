@@ -800,6 +800,16 @@ body.light-theme{
   transition: .4s;
 }
 
+.work__buttondemo{
+  display: flex;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  transition: .4s;
+}
+
 .work__button:hover .work__icon{
   transform: translateX(.25rem);
 }
