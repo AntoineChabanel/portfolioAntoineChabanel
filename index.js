@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const { json } = require('body-parser');
 const projectsRouter = require('./routers/projectsRouter');
 const filesRouter = require('./routers/filesRouter');
+const MatomoTracker = require('matomo-tracker');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -17,6 +18,18 @@ app.use(bodyParser.json());
 
 app.use(cors());
 app.use('/assets', express.static(path.join(__dirname, 'public/assets')));
+
+var matomo = new MatomoTracker(1, 'http://votre-serveur-matomo.com/matomo.php');
+
+app.use(function(req, res, next) {
+    matomo.track({
+      url: req.protocol + '://' + req.get('host') + req.originalUrl,
+      action_name: 'Page view',
+      ua: req.headers['user-agent']
+    });
+
+    next();
+});
 
 app.get("/", (req, res) => {
     res.render('index')
