@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use('/assets', express.static(path.join(__dirname, 'public/assets')));
 
-var matomo = new MatomoTracker(1, 'http://localhost', true);
+var matomo = new MatomoTracker(1, 'http://localhost/matomo.php');
 
 app.use(function(req, res, next) {
     matomo.track({
