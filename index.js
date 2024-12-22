@@ -25,7 +25,10 @@ app.use(function(req, res, next) {
     matomo.track({
       url: req.protocol + '://' + req.get('host') + req.originalUrl,
       action_name: 'Page view',
-      ua: req.headers['user-agent']
+      ua: req.headers['user-agent'],
+      lang: req.headers['accept-language'],
+      urlref: req.headers['referer'],
+
     });
 
     next();

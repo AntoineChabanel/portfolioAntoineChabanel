@@ -1,8 +1,8 @@
 extends ../layout
 
 block include
-  link(rel='apple-touch-icon' sizes='180x180' href='assets/img/favicon_io/apple-touch-icon.png')
-  link(rel='icon' type='image/png' sizes='32x32' href='assets/img/favicon_io/favicon-32x32.png')
+  //link(rel='apple-touch-icon' sizes='180x180' href='assets/img/favicon_io/apple-touch-icon.png')
+  //link(rel='icon' type='image/png' sizes='32x32' href='assets/img/favicon_io/favicon-32x32.png')
   link(rel='icon' type='image/png' sizes='16x16' href='assets/img/favicon_io/favicon-16x16.png')
   link(rel='manifest' href='assets/img/favicon_io/site.webmanifest')
 
@@ -44,18 +44,16 @@ block content
           script(type="text/javascript").
             var typed = new Typed('.home__quote', {
               strings: [
-                "Bienvenue sur mon portfolio !",
-                "Ce que je fais...",
-                "Création de jeux qui ont du sens",
-                "Création de jeux qui racontent une histoire",
-                "Création de jeux inclusifs",
-                "Création de jeux multiplateformes",
+                "Développement de jeux qui ont du sens",
+                "Développement de jeux qui racontent une histoire",
+                "Développement de jeux inclusifs",
+                "Développement de jeux multiplateformes",
                 "Développement C++ multiplateforme",
                 "Développement éco-responsable",
                 "Développement d'applications bureau",
                 "Développement d'applications web",
                 "Développement d'applications mobiles",
-                "... et bien plus encore !"
+                "Intelligence Artificielle - Machine Learning",
                 ],
               typeSpeed: 30,
               backSpeed: 10,
@@ -65,7 +63,7 @@ block content
               cursorChar: '▮',
             });
         .home__handle
-          img.about__img(src='assets/img/antoine/antoine-01.png' alt='')
+          img.about__img(src='assets/img/antoine/antoine-01.png' alt='Image de profil de Antoine Chabanel')
           //lottie-player(src='https://assets4.lottiefiles.com/packages/lf20_0bptkpmg.json' background='transparent' speed='1' style='width: 300px; height: 300px;' loop='' autoplay='')
         .home__social
           a.home__social-link(href='https://www.linkedin.com/in/antoine-chabanel/' target='_blank')
@@ -191,120 +189,114 @@ block content
                 i.bx.bxl-unity
                 div
                   h3.skills__name Unity
-                  span.skills__level Avancé
               .skills__data
                 i.bx.bx-desktop
                 div
                   h3.skills__name Qt
-                  span.skills__level Intermédiaire
+              .skills__data
+                i.bx.bx-moon
+                div
+                  h3.skills__name OpenGL
               .skills__data
                 i.bx.bx-bot
                 div
                   h3.skills__name Godot
-                  span.skills__level Débutant
               .skills__data
                 i.bx.bxl-docker
                 div
                   h3.skills__name Docker
-                  span.skills__level Débutant
             .skills__groups
               .skills__data
                 i.bx.bxl-git
                 div
                   h3.skills__name Git
-                  span.skills__level Avancé
               .skills__data
                 i.bx.bx-joystick
                 div
                   h3.skills__name Unreal Engine
-                  span.skills__level Débutant
               .skills__data
                 i.bx.bx-terminal
                 div
                   h3.skills__name Systèmes Linux
-                  span.skills__level Intermédiaire
               .skills__data
-                i.bx.bxl-blender
+                i.bx.bx-package
                 div
-                  h3.skills__name Blender
-                  span.skills__level Débutant
+                  h3.skills__name CMake/Conan
+              .skills__data
+                i.bx.bxl-visual-studio
+                div
+                  h3.skills__name Visual Studio
         .skills__content
           h3.skills__title Languages/Compétences techniques
           .skills__box
             .skills__groups
               .skills__data
-                i.bx.bxs-badge-check
+                i.bx.bxl-c-plus-plus
                 div
                   h3.skills__name C++
               .skills__data
-                i.bx.bxs-badge-check
+                i.bx.bx-code-block
                 div
                   h3.skills__name C#
               .skills__data
-                i.bx.bxs-badge-check
+                i.bx.bx-code-block
                 div
                   h3.skills__name C
               .skills__data
-                i.bx.bxs-badge-check
+                i.bx.bxl-java
                 div
                   h3.skills__name Java
               .skills__data
-                i.bx.bxs-badge-check
+                i.bx.bxl-nodejs
                 div
                   h3.skills__name Express
             .skills__groups
               .skills__data
-                i.bx.bxs-badge-check
+                i.bx.bxl-javascript
                 div
-                  h3.skills__name JavaScript
+                  h3.skills__name JavaScript/TS
               .skills__data
-                i.bx.bxs-badge-check
+                i.bx.bxl-php
                 div
                   h3.skills__name PHP
               .skills__data
-                i.bx.bxs-badge-check
+                i.bx.bx-data
                 div
                   h3.skills__name SQL
               .skills__data
-                i.bx.bxs-badge-check
+                i.bx.bx-network-chart
                 div
                   h3.skills__name Conception objet (UML)
               .skills__data
-                i.bx.bxs-badge-check
+                i.bx.bxl-html5
                 div
                   h3.skills__name HTML/CSS
-    // =============== TESTIMONIALS ===============
-    //- section#testimonial.testimonial.section
-    //-   span.section__subtitle My clients say
-    //-   h2.section__title Testimonial
-    //-   .testimonial__container.container.swiper
-    //-     .swiper-wrapper
-    //-       .testimonial__card.swiper-slide
-    //-         img.testimonial__img(src='assets/img/testimonial(4).png' alt='')
-    //-         h3.testimonial__name Shubham Maurya
-    //-         p.testimonial__description
-    //-           | Literally, i was not expecting but after he finished the project i was blown away...
-    //-       .testimonial__card.swiper-slide
-    //-         img.testimonial__img(src='assets/img/testimonial(5).png' alt='')
-    //-         h3.testimonial__name Ishika Mamgain
-    //-         p.testimonial__description
-    //-           | Very limited time was left for the deadline but Vaibhav finished it on time
-    //-       .testimonial__card.swiper-slide
-    //-         img.testimonial__img(src='assets/img/testimonial(1).png' alt='')
-    //-         h3.testimonial__name Suraj Manwal
-    //-         p.testimonial__description
-    //-           | Bete moj krdi. Waah bete waah Moj krdi
-    //-       .testimonial__card.swiper-slide
-    //-         img.testimonial__img(src='assets/img/testimonial(2).png' alt='')
-    //-         h3.testimonial__name Lokesh Rawat
-    //-         p.testimonial__description
-    //-           | Expecting to work together again. It fun working with you, learned a lot of things
-    //-       .testimonial__card.swiper-slide
-    //-         img.testimonial__img(src='assets/img/testimonial(3).png' alt='')
-    //-         h3.testimonial__name Mr. A.J Vishwkarma
-    //-         p.testimonial__description
-    //-           | This bro Rocks🤘  My google for all my questions. He helps me a lot, Thankyou...
-        .swiper-pagination
+    //- // =============== CAREER ===============
+    //- section#careerpath.careerpath.section
+    //-   span.section__subtitle Parcours professionnel
+    //-   h2.section__title Mon parcours
+    //-   .testimonial__container.container
+    //-     div.testimonial__content
+    //-       ul.edu_ul
+    //-         li.edu_li(style="--accent-color:#41516C")
+    //-           .date 2024
+    //-           .title Obtention du DUT Informatique
+    //-           .descr Conception et développement de programmes et applications 2D et 3D.
+    //-           .descr Pratique de langages et bibliothèques comme C++, Python, Java, QT, Open GL, Studio, Unity,Visual Studio.
+    //-           .descr Apprentissage de la modélisation 3D et de l'animation.
+    //-         li.edu_li(style="--accent-color:#FBCA3E")
+    //-           .date Avril -> Juin 2024
+    //-           .title Développeur chez André Laurent
+    //-           .descr Mise à jour et amélioration d’une application PHP existante
+    //-           .descr Création d’une application C++ de conversion et transfert de données entre deux logiciels
+    //-           .descr Administration réseau (gestion de parc informatique)
+    //-         li.edu_li(style="--accent-color:#E24A68")
+    //-           .date 2017-2019
+    //-           .title Fondateur d'un serveur de jeu Minecraft
+    //-           .descr Serveur Minecraft communautaire “Titanium”
+
+
+
     // =============== CONTACT ===============
     section#contact.contact.section
       span.section__subtitle Informations de contact

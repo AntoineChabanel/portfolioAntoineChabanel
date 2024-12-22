@@ -18,13 +18,19 @@ header#header.header.transHead
             i.bx.bx-user
         li.nav__item
           a.nav__link(onclick="goTo('work'); return false;" href='#work')
-            i.bx.bx-briefcase-alt
+            i.bx.bx-git-branch
+        li.nav__item
+          a.nav__link(onclick="goTo('skills'); return false;" href='#skills')
+            i.bx.bx-diamond
+        //- li.nav__item 
+        //-   a.nav__link(onclick="goTo('careerpath'); return false;" href='#careerpath')
+        //-     i.bx.bx-briefcase-alt
         li.nav__item
           a.nav__link(onclick="goTo('contact'); return false;" href='#contact')
             i.bx.bx-message-square
     // Theme change button
     i#theme-button.bx.bx-moon.change-theme
-i.bx.bx-moon.change-theme
+i#theme-button.bx.bx-moon.change-theme
 a.nav__logo2(href='#') Antoine Chabanel
 // =============== MAIN ===============
 main.main
@@ -32,7 +38,7 @@ main.main
 // =============== FOOTER ===============
 footer.footer
   .footer__container.container
-    h1.footer__title Merci de votre visite !
+    h1.footer__title Merci pour votre visite !
     //- ul.footer__list
       //- li
       //-   a.footer__link(onclick="goTo('about');") À propos
@@ -53,9 +59,7 @@ footer.footer
     //YOU ARE NOT ALLOWED TO REMOVE CREDIT LINKS//
     /////////////////////////////////////////////
     h2.footer__love
-      | Front-end de base fait avec 
-      span(style='color: #e25555;') &hearts; 
-      | par 
+      | Basé sur le projet initial de 
       a(href="https://instagram.com/that_back.bencher" target="_blank")
         | Vaibhav Aswal 
     //////////////////////////////////////////////
