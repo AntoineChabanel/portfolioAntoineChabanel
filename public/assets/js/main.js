@@ -1,201 +1,274 @@
 /*=============== CHANGE BACKGROUND HEADER ===============*/
-function scrollHeader(){
-    const header = document.getElementById('header')
-    // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 50){
-
-     header.classList.add('scroll-header');
-     header.classList.remove('transHead')
-     }
-      else
-      { header.classList.remove('scroll-header')
-      header.classList.add('transHead')
-    }
+function scrollHeader() {
+  const header = document.getElementById("header");
+  // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+  if (this.scrollY >= 50) {
+    header.classList.add("scroll-header");
+    header.classList.remove("transHead");
+  } else {
+    header.classList.remove("scroll-header");
+    header.classList.add("transHead");
+  }
 }
-window.addEventListener('scroll', scrollHeader)
-
+window.addEventListener("scroll", scrollHeader);
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
-let mixerPortfolio = mixitup('.work__container', {
-    selectors: {
-        target: '.work__card'
-    },
-    animation: {
-        duration: 300
-    }
+let mixerPortfolio = mixitup(".work__container", {
+  selectors: {
+    target: ".work__card",
+  },
+  animation: {
+    duration: 300,
+  },
 });
 
-/* Link active work */ 
-const linkwork = document.querySelectorAll('.work__item')
+/* Link active work */
+const linkwork = document.querySelectorAll(".work__item");
 
-function activeWork(){
-    linkwork.forEach(l=> l.classList.remove('active-work'))
-    this.classList.add('active-work')
+function activeWork() {
+  linkwork.forEach((l) => l.classList.remove("active-work"));
+  this.classList.add("active-work");
 }
 
-linkwork.forEach(l=> l.addEventListener('click', activeWork))
+linkwork.forEach((l) => l.addEventListener("click", activeWork));
 
 /*=============== SWIPER TESTIMONIAL ===============*/
 let swiperTestimonial = new Swiper(".testimonial__container", {
-    spaceBetween: 24,
-    loop: true,
-    grabCursor: true,
+  spaceBetween: 24,
+  loop: true,
+  grabCursor: true,
 
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    450: {
+      slidesPerView: 2,
     },
-    breakpoints: {
-        450: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 48,
-        },
-        1024: {
-            slidesPerView: 3,
-          },
-      },
-})
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 48,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll("section[id]");
 
-function scrollActive(){
-    const scrollY = window.pageYOffset
+function scrollActive() {
+  const scrollY = window.pageYOffset;
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id')
-        if( document.querySelector('.nav__menu a[href*=' + sectionId + ']')){
-            if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-                document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-            }else{
-                document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-            }
-        }else{    
-        }
-    })
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight,
+      sectionTop = current.offsetTop - 58,
+      sectionId = current.getAttribute("id");
+    if (document.querySelector(".nav__menu a[href*=" + sectionId + "]")) {
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        document
+          .querySelector(".nav__menu a[href*=" + sectionId + "]")
+          .classList.add("active-link");
+      } else {
+        document
+          .querySelector(".nav__menu a[href*=" + sectionId + "]")
+          .classList.remove("active-link");
+      }
+    } else {
+    }
+  });
 }
-window.addEventListener('scroll', scrollActive)
+window.addEventListener("scroll", scrollActive);
 
-/*=============== LIGHT DARK THEME ===============*/ 
-const themeButtons = document.querySelectorAll('#theme-button')
-const lightTheme = 'light-theme'
-const iconTheme = 'bx-sun'
+/*=============== LIGHT DARK THEME ===============*/
+const themeButtons = document.querySelectorAll("#theme-button");
+const lightTheme = "light-theme";
+const iconTheme = "bx-sun";
 
 // Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
+const selectedTheme = localStorage.getItem("selected-theme");
+const selectedIcon = localStorage.getItem("selected-icon");
 
 // We obtain the current theme that the interface has by validating the light-theme class
-const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'dark' : 'light'
-const getCurrentIcon = (nb) => themeButtons[nb].classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun'
+const getCurrentTheme = () =>
+  document.body.classList.contains(lightTheme) ? "dark" : "light";
+const getCurrentIcon = (nb) =>
+  themeButtons[nb].classList.contains(iconTheme) ? "bx bx-moon" : "bx bx-sun";
 
 // We validate if the user previously chose a topic
 if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the light
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](lightTheme)
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+    lightTheme
+  );
   for (let i = 0; i < themeButtons.length; i++) {
-    themeButtons[i].classList[selectedIcon === 'bx bx-moon' ? 'add' : 'remove'](iconTheme)
+    themeButtons[i].classList[selectedIcon === "bx bx-moon" ? "add" : "remove"](
+      iconTheme
+    );
   }
 }
 
 // Activate / deactivate the theme manually with the button
 for (let i = 0; i < themeButtons.length; i++) {
-    themeButtons[i].addEventListener('click', () => {
-        // Add or remove the light / icon theme
-        document.body.classList.toggle(lightTheme)
-        for (let j = 0; j < themeButtons.length; j++) {
-            themeButtons[j].classList.toggle(iconTheme)
-        }
-        // We save the theme and the current icon that the user chose
-        localStorage.setItem('selected-theme', getCurrentTheme())
-        localStorage.setItem('selected-icon', getCurrentIcon(i))
-    })
+  themeButtons[i].addEventListener("click", () => {
+    // Add or remove the light / icon theme
+    document.body.classList.toggle(lightTheme);
+    for (let j = 0; j < themeButtons.length; j++) {
+      themeButtons[j].classList.toggle(iconTheme);
+    }
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem("selected-theme", getCurrentTheme());
+    localStorage.setItem("selected-icon", getCurrentIcon(i));
+  });
 }
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
-    distance: '60px',
-    reset: false,
-    duration: 1000,
-    delay:200,
-})
+  distance: "60px",
+  reset: false,
+  duration: 1000,
+  delay: 200,
+});
 
-sr.reveal(`.home__data`, {origin: 'top', reset: false, duration: 2500,})
-sr.reveal(`.home__handle`, {delay: 700, origin: 'top', reset: false, duration: 2500,})
-sr.reveal(`.home__social, .home__scroll`, {delay: 900, origin: 'bottom', reset: false, duration: 2500,})
-sr.reveal(`.about__description, .about__box, .services__card,
+sr.reveal(`.home__data`, { origin: "top", reset: false, duration: 2500 });
+sr.reveal(`.home__handle`, {
+  delay: 700,
+  origin: "top",
+  reset: false,
+  duration: 2500,
+});
+sr.reveal(`.home__social, .home__scroll`, {
+  delay: 900,
+  origin: "bottom",
+  reset: false,
+  duration: 2500,
+});
+sr.reveal(
+  `.about__description, .about__box, .services__card,
             .work__card, .contact__form-input,
-            .contact__form-tag`, {origin:'left', distance: '60px'})
-sr.reveal(`.contact__card, .skills__content, .about__img, .button, .work__filters,
-            .testimonial__container`, {origin: 'bottom'})
-sr.reveal(`.section__subtitle, .section__title`, {distance: '0px', easing: 'ease-in'})
-sr.reveal(`.footer__container`, {origin: 'top', distance:'200px', duration: 2000})
+            .contact__form-tag`,
+  { origin: "left", distance: "60px" }
+);
+sr.reveal(
+  `.contact__card, .skills__content, .about__img, .button, .work__filters,
+            .testimonial__container`,
+  { origin: "bottom" }
+);
+sr.reveal(`.section__subtitle, .section__title`, {
+  distance: "0px",
+  easing: "ease-in",
+});
+sr.reveal(`.footer__container`, {
+  origin: "top",
+  distance: "200px",
+  duration: 2000,
+});
 
 /* Navigating between page*/
 function goTo(elementId) {
-    var element = document.getElementById(elementId);
-    element.scrollIntoView({
-      block: 'start',
-      behavior: 'smooth'
-    });
-  }
-
+  var element = document.getElementById(elementId);
+  element.scrollIntoView({
+    block: "start",
+    behavior: "smooth",
+  });
+}
 
 //IZI MODAL
 
-var currentProject = '';
+const ModalType = {
+  PROJECTS: "projects",
+  CVS: "cvs",
+};
+
+function switchModalType(modalType) {
+  switch (modalType) {
+    case ModalType.PROJECTS:
+      return $("#modal").iziModal({
+        title: "Détails du projet",
+        subtitle: "",
+        width: 1200,
+        padding: 0,
+        length: 0,
+        background: null,
+
+        onOpening: function (modal) {
+          modal.startLoading();
+
+          $.get("/projects/" + currentProject, function (data) {
+            $("#modal .iziModal-content").html(data);
+            if (hljs) {
+              hljs.highlightAll();
+            }
+            let currentColor = getComputedStyle(document.body)
+              .getPropertyValue("--body-color")
+              .trim();
+            $("#modal").iziModal("setBackground", currentColor);
+            $("#modal .iziModal-header").css("background-color", currentColor);
+            modal.stopLoading();
+          });
+        },
+        onClosed: function (modal) {
+          modal.destroy();
+        },
+      });
+    case ModalType.CVS:
+      return $("#modal").iziModal({
+        title: "Choisissez votre CV",
+        subtitle: "",
+        width: 600,
+        padding: 50,
+        length: 0,
+        background: null,
+
+        onOpening: function (modal) {
+          modal.startLoading();
+
+          $.get("/cvs/", function (data) {
+            $("#modal .iziModal-content").html(data);
+            let currentColor = getComputedStyle(document.body)
+              .getPropertyValue("--body-color")
+              .trim();
+            $("#modal").iziModal("setBackground", currentColor);
+            $("#modal .iziModal-header").css("background-color", currentColor);
+            modal.stopLoading();
+          });
+        },
+        onClosed: function (modal) {
+          modal.destroy();
+        },
+      });
+    default:
+      return null;
+  }
+}
+
+var currentProject = "";
 
 //sr.reveal(`.project_about_img, .project_about_h2, .project_about_li, .project_about_p, .project_about_img`, { origin: 'bottom' })
 
-var modal = $('#modal').iziModal({
-    title: 'Détails du projet',
-    subtitle: '',
-    width: 1200,
-    padding: 0,
-    length: 0,
-    background: null,
-
-    onOpening: function(modal){
- 
-        modal.startLoading();
- 
-        $.get('/projects/' + currentProject, function(data) {
-            $("#modal .iziModal-content").html(data);
-            if (hljs) {
-                hljs.highlightAll();
-            }
-            //sync with current theme and css variables
-            let currentColor = getComputedStyle(document.body).getPropertyValue('--body-color').trim();
-            $('#modal').iziModal('setBackground', currentColor);
-            //header color
-            $('#modal .iziModal-header').css('background-color', currentColor);
-            modal.stopLoading();
-        });
-    }
-});
-
-const workButtonSeemore = document.querySelectorAll('.work__buttonseemore');
+const workButtonSeemore = document.querySelectorAll(".work__buttonseemore");
 
 workButtonSeemore.forEach((button) => {
-    // Ajoutez un écouteur d'événements click à chaque bouton
-    button.addEventListener('click', (event) => {
-        event.preventDefault();
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
 
-        // Obtenez le nom du projet à partir de l'ID du bouton
-        let projectButton = event.target.closest('.work__buttonseemore');
-        currentProject = projectButton.id;
-        
-        modal.iziModal('open');
-    });
+    let projectButton = event.target.closest(".work__buttonseemore");
+    currentProject = projectButton.id;
+
+    switchModalType(ModalType.PROJECTS).iziModal("open");
+  });
 });
 
+const cvButton = document.getElementById("cv-button");
+
+cvButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  switchModalType(ModalType.CVS).iziModal("open");
+});

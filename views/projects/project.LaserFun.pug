@@ -1,0 +1,27 @@
+doctype html
+head
+    link(rel="stylesheet", href="assets/css/styles_project_about.css")
+    script(type="text/javascript").
+        tippy('#design-pattern', {
+            theme: 'translucent',
+            content: 'Un design pattern est une solution générale réutilisable à un problème qui se présente souvent lors de la conception de logiciels.',
+            placement: 'top',
+        });
+        tippy('#state-machine', {
+            theme: 'translucent',
+            content: 'Cela représente l\'état dans lequel se trouve un objet à un moment donné, et les transitions possibles vers d\'autres états.',
+            placement: 'top',
+        });
+
+main.main
+    h1.page-title.project_about_h1 Laser Fun
+    p.page-description.project_about_p
+        strong Avec Laser Fun, découvrez un Laser Game repensé ! Bientôt plus à venir à propos de ce projet. 
+        
+        a(target="_blank" href="https://www.linkedin.com/in/antoine-chabanel/details/projects/") Voir le projet sur LinkedIn
+        //- br
+        //- | Un Laser Game,est une activité physique où les participants, revêtus habituellement d'une veste à capteurs, se tirent dessus avec des pistolets laser.
+        //- br
+        //- | Vous devez garder un œil sur vos statistiques (ressources, humeur des habitants.es, CO2 émis) en agençant les bâtiments intelligemment et en faisant des choix politiques, afin d’éviter les catastrophes naturelles et le malheur des habitants.es.
+        //- br
+    iframe.project_about_youtubeintegration(width="560" height="315" src="https://www.youtube.com/embed/eWZd-eU-Imk?si=8IWDp_0F82Z74iH6" title="Laser Fun (trailer)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)

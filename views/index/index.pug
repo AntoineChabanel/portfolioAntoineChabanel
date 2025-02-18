@@ -35,7 +35,8 @@ block content
         .home__data
           span.home__greeting Bonjour ! Je suis
           h1.home__name Antoine Chabanel
-          h3.home__education Étudiant en Informatique appliquée à l'image
+          h3.home__education Développeur apprenti chez 
+            a(href="https://handiexceller.com" target="_blank") Handi Exceller
           //- .home__buttons
           //-   a.button.button--ghost(href='assets/pdf/resume.pdf')
           //-     | View CV
@@ -46,16 +47,16 @@ block content
               strings: [
                 "Développement de jeux qui ont du sens",
                 "Développement de jeux qui racontent une histoire",
-                "Développement de jeux inclusifs",
-                "Développement de jeux multiplateformes",
                 "Développement C++ multiplateforme",
                 "Développement éco-responsable",
                 "Développement d'applications bureau",
                 "Développement d'applications web",
                 "Développement d'applications mobiles",
                 "Intelligence Artificielle - Machine Learning",
+                "Développement de jeux inclusifs",
+                "Développement de jeux multiplateformes",
                 ],
-              typeSpeed: 30,
+              typeSpeed: 40,
               backSpeed: 10,
               backDelay: 1000,
               smartBackspace: true,
@@ -63,7 +64,7 @@ block content
               cursorChar: '▮',
             });
         .home__handle
-          img.about__img(src='assets/img/antoine/antoine-01.png' alt='Image de profil de Antoine Chabanel')
+          img.about__img(src='assets/img/antoine/antoine-01.webp' alt='Image de profil de Antoine Chabanel')
           //lottie-player(src='https://assets4.lottiefiles.com/packages/lf20_0bptkpmg.json' background='transparent' speed='1' style='width: 300px; height: 300px;' loop='' autoplay='')
         .home__social
           a.home__social-link(href='https://www.linkedin.com/in/antoine-chabanel/' target='_blank')
@@ -80,7 +81,7 @@ block content
       span.section__subtitle Introduction
       h2.section__title À propos de moi...
       .about__container.container.grid
-        img.about__img(src='assets/img/antoine/antoine-02.webp' alt='')
+        img.about__img2(src='assets/img/antoine/antoine-02.webp' alt='')
         .about__data
           //- .about__info
             //- .about__box
@@ -107,7 +108,9 @@ block content
             | 💭 Grâce à de récentes expériences, j'ai compris qu'il était important pour moi de faire quelque chose qui ait du sens et qui serve aux autres mais aussi de pouvoir avoir des responsabilités.
           p.about__description
             | 🔬 Cela m'a aussi permis d'élargir mon projet professionnel à d'autres horizons: je suis toujours intéressé par le domaine du développement de jeu vidéo mais je suis aussi ouvert à des domaines scientifiques et d'utilité publique.
-          a.button(href="/files/download/CV") Télécharger mon CV
+          p.about__description
+            | 📚 Retrouvez mes différents CV ici:
+          a.button(id="cv-button") Télécharger mon CV
       // =============== WORK ===============
     section#work.work.section
       #modal
@@ -117,8 +120,20 @@ block content
         span.work__item.active-work(data-filter='all') Tout
         span.work__item(data-filter='.videogame') Jeux vidéos
         span.work__item(data-filter='.web') Web
+        span.work__item(data-filter='.embedded') Embarqué
         span.work__item(data-filter='.other') Autres
       .work__container.container.grid
+        .work__card.mix.embedded
+          img.work__img(src='/assets/img/laserfun/laserfun-preview-01.gif' alt='')
+          h3.work__title LASER FUN 
+          p.work__subtitle Création de Laser Fun, un projet de Laser Game repensé avec un système de classes de personnage, en utilisant de l'informatique embarquée.
+          .wbtn
+            a.work__buttondemo(href='https://youtu.be/eWZd-eU-Imk?si=8IWDp_0F82Z74iH6' target="_blank")
+              | Trailer 
+              i.bx.bx-video-recording
+            a.work__buttonseemore#LaserFun
+              | Voir plus 
+              i.bx.bx-right-arrow-alt.work__icon
         .work__card.mix.videogame
           img.work__img(src='/assets/img/neocity/neocity-preview-01.gif' alt='')
           h3.work__title NEOCITY 

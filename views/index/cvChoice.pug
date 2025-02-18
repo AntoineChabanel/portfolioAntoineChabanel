@@ -1,0 +1,47 @@
+doctype html
+html
+    head
+        style.
+            .flex-container {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+            }
+            .flex-container li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 150px; 
+                text-align: center;
+            }
+            h3 {
+                margin-bottom: 10px;
+            }
+        script.
+            function addHeader(event, cvtype) {
+                event.preventDefault();
+                const link = event.target.closest('a');
+                fetch(link.href, {
+                    method: 'GET',
+                    headers: {
+                        'cvtype': cvtype
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        window.location.href = link.href;
+                    }
+                });
+            }
+    body
+        ul.flex-container
+            li
+                h3 🎮 Recruteurs Jeux vidéo
+                a.button(href='/files/download/CV?cvtype=videogames' target='_blank') CV Jeux vidéo
+            li
+                h3 🌐 Recruteurs Développement web
+                a.button(href='/files/download/CV?cvtype=web' target='_blank') CV Web
+            li
+                h3 💻 Recruteurs autres (général)
+                a.button(href='/files/download/CV?cvtype=global' target='_blank') CV Général
