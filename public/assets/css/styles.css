@@ -27,7 +27,7 @@
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
-  --body-color: hsl(var(--second-hue), 94%, 25%);
+  --body-color: #042940;
   --container-color: hsl(var(--second-hue), 32%, 12%);
 
   /*========== Font and typography ==========*/
@@ -85,7 +85,7 @@ textarea {
 }
 
 body {
-  background-color: var(--body-color);
+  background: radial-gradient(circle at center, #005c53 0%, #042940 70%);
   color: var(--text-color);
   transition: 0.4s; /* for light mode animation */
 }
@@ -139,6 +139,7 @@ body.light-theme {
   --text-color: hsl(var(--second-hue), 8%, 35%);
   --body-color: hsl(var(--second-hue), 100%, 95%);
   --container-color: #fff;
+  background: radial-gradient(circle at center, #d6d58e 0%, #ffffff 95%);
 }
 
 /*========== 
@@ -184,6 +185,10 @@ body.light-theme {
 .light-theme .testimonial__card,
 .light-theme.contact__card {
   box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, 0.1);
+}
+
+.light-theme .footer {
+  background-color: #d6d58e;
 }
 
 .light-theme::-webkit-scrollbar {
@@ -1139,7 +1144,7 @@ body.light-theme {
 }
 /*=============== FOOTER ===============*/
 .footer {
-  background-color: var(--first-color);
+  background-color: #d6d58e;
 }
 
 .footer__container {
