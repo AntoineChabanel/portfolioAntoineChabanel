@@ -47,14 +47,11 @@ block content
               strings: [
                 "Développement de jeux qui ont du sens",
                 "Développement de jeux qui racontent une histoire",
-                "Développement C++ multiplateforme",
-                "Développement éco-responsable",
-                "Développement d'applications bureau",
-                "Développement d'applications web",
-                "Développement d'applications mobiles",
-                "Intelligence Artificielle - Machine Learning",
                 "Développement de jeux inclusifs",
                 "Développement de jeux multiplateformes",
+                "Développement de jeux 'IRL'",
+                "Développement C++ multiplateforme",
+                "Développement éco-responsable",
                 ],
               typeSpeed: 40,
               backSpeed: 10,
@@ -83,31 +80,41 @@ block content
       .about__container.container.grid
         img.about__img2(src='assets/img/antoine/antoine-02.webp' alt='')
         .about__data
-          //- .about__info
-            //- .about__box
-            //-   i.bx.bx-award.about__icon
-            //-   h3.about__title Experience
-            //-   span.about__subtitle 2+ Years
-            //- .about__box
-            //-   i.bx.bx-briefcase-alt.about__icon
-            //-   h3.about__title Completed
-            //-   span.about__subtitle 5+ Projects
-            //- .about__box
-            //-   i.bx.bxl-snapchat.about__icon
-            //-   h3.about__title SnapScore
-            //-   span.about__subtitle 95,000+
           p.about__description
-            | 🧑‍🎤 Ce que je préfère quand je commence un projet de nouveau jeu vidéo, c’est d’abord réfléchir aux message(s), direct(s) et/ou caché(s) qu’il va porter, à l’histoire, et surtout au sens et à l’utilité qu’il aura.
+            | 🧑‍🎤 Ce que je préfère quand je commence un projet de nouveau jeu vidéo, c'est d'abord 
+            b(style="color: var(--first-color);") réfléchir aux message(s)
+            | , direct(s) et/ou caché(s) qu'il va porter, à l'histoire, et surtout au sens et à l'utilité qu'il aura.
           p.about__description
-            | 🔧 Quand il est l’heure de programmer, une fois que les fondations sont posées, ce que j’aime le plus est l’aspect de séparation des préoccupations: une fonctionnalité à la fois !
+            | 🔧 Quand il est l'heure de programmer, une fois que les fondations sont posées, ce que j'aime le plus est l'aspect de 
+            b(style="color: var(--first-color);") séparation des préoccupations
+            | : une fonctionnalité à la fois !
           p.about__description
-            | 💬 Les commentaires et les discussions que le jeu peut entraîner sont aussi des aspects importants à mes yeux.
+            | 💬 Les 
+            b(style="color: var(--first-color);") commentaires et les discussions 
+            | que le jeu peut entraîner sont aussi des aspects importants à mes yeux.
           p.about__description
-            | 🖥️ A côté du jeu vidéo, j’aime aussi le développement d’applications bureau et web, et je suis toujours curieux d’apprendre de nouvelles technologies.
+            | 🖥️ En dehors du jeu vidéo, j'ai d'autres centres d'intérêt. Je suis aussi curieux d'apprendre de nouvelles technologies. Le 
+            b(style="color: var(--first-color);") C++ est mon langage de cœur
+            | , car il offre un équilibre idéal entre 
+            b(style="color: var(--first-color);") abstraction et contrôle bas niveau
+            | , permettant une gestion fine des ressources sans être trop éloigné de la machine.
           p.about__description
-            | 💭 Grâce à de récentes expériences, j'ai compris qu'il était important pour moi de faire quelque chose qui ait du sens et qui serve aux autres mais aussi de pouvoir avoir des responsabilités.
+            | ⚡ Par exemple, vous pouvez trouver les détails ci-dessous d'un de mes récents projets, le 
+            b(style="color: var(--first-color);") "back-end" de Laser Fun
+            | , un projet de Laser Game repensé avec un 
+            b(style="color: var(--first-color);") système de classes de personnage
+            | , en utilisant de l'
+            b(style="color: var(--first-color);") informatique embarquée (Raspberry Pi)
+            | . Ce logiciel en cours de développement est un 
+            b(style="color: var(--first-color);") serveur
+            |  communiquant avec une application web "front-end" et aux armes des joueurs par 
+            b(style="color: var(--first-color);") radio-communication
+            | .
           p.about__description
-            | 🔬 Cela m'a aussi permis d'élargir mon projet professionnel à d'autres horizons: je suis toujours intéressé par le domaine du développement de jeu vidéo mais je suis aussi ouvert à des domaines scientifiques et d'utilité publique.
+            | 💭 Grâce à de récentes expériences et à ma formation, j'ai compris qu'il était important pour moi de faire quelque chose qui ait du sens et qui serve aux autres mais aussi de pouvoir avoir des responsabilités.
+          p.about__description
+            | 🔬 Cela m'a aussi permis d'élargir mon projet professionnel à d'autres horizons: je suis toujours intéressé par le domaine du développement de jeu vidéo mais je suis aussi ouvert 
+            b(style="color: var(--first-color);") à des domaines scientifiques et d'utilité publique.
           p.about__description
             | 📚 Retrouvez mes différents CV ici:
           a.button(id="cv-button") Télécharger mon CV
@@ -195,6 +202,21 @@ block content
     section#skills.skills.section
       span.section__subtitle Compétences
       h2.section__title Mes compétences
+      div.skills__descriptions-container
+        p.skills__description
+          | 🔧 Voici les 
+          b(style="color: var(--first-color);") logiciels et technologies
+          |  que j'utilise le plus.
+        p.skills__description
+          | 🌐 En dehors du jeu vidéo, je suis 
+          b(style="color: var(--first-color);") polyvalent
+          | : 
+          b(style="color: var(--first-color);") développement web
+          |  avec Node.js, 
+          b(style="color: var(--first-color);") bureau
+          |  avec Qt et OpenGL, 
+          b(style="color: var(--first-color);") mobile
+          |  avec Unity, Android Studio, .NET...
       .skills__container.container.grid
         .skills__content
           h3.skills__title Logiciels/Technologies principales
@@ -302,13 +324,13 @@ block content
     //-         li.edu_li(style="--accent-color:#FBCA3E")
     //-           .date Avril -> Juin 2024
     //-           .title Développeur chez André Laurent
-    //-           .descr Mise à jour et amélioration d’une application PHP existante
-    //-           .descr Création d’une application C++ de conversion et transfert de données entre deux logiciels
+    //-           .descr Mise à jour et amélioration d'une application PHP existante
+    //-           .descr Création d'une application C++ de conversion et transfert de données entre deux logiciels
     //-           .descr Administration réseau (gestion de parc informatique)
     //-         li.edu_li(style="--accent-color:#E24A68")
     //-           .date 2017-2019
     //-           .title Fondateur d'un serveur de jeu Minecraft
-    //-           .descr Serveur Minecraft communautaire “Titanium”
+    //-           .descr Serveur Minecraft communautaire "Titanium"
 
 
 

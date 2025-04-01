@@ -17,17 +17,17 @@
   --sat: 66%;
   --lig: 75%;
   --second-hue: 219; */
-  --first-hue: 22;
-  --sat: 64%;
-  --lig: 40%;
-  --second-hue: 22;
+  --first-hue: 174;
+  --sat: 100%;
+  --lig: 36%;
+  --second-hue: 203;
 
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
-  --body-color: hsl(var(--second-hue), 100%, 5%);
+  --body-color: hsl(var(--second-hue), 94%, 25%);
   --container-color: hsl(var(--second-hue), 32%, 12%);
 
   /*========== Font and typography ==========*/
@@ -323,7 +323,7 @@ body.light-theme {
 /*=============== HOME ===============*/
 .home__container {
   position: relative;
-  row-gap: 4.5rem;
+  
   padding-top: 5rem;
   height: 100vh;
 }
@@ -355,7 +355,7 @@ body.light-theme {
 
 .home__quote {
   font-size: var(--biggest-font-size);
-  color: white;
+  color: var(--first-color);
   margin-bottom: 2rem;
 }
 
@@ -389,7 +389,7 @@ body.light-theme {
 }
 
 .home {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1014%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c61 C 96%2c84.8 288%2c183 480%2c180 C 672%2c177 768%2c49.6 960%2c46 C 1152%2c42.4 1344%2c138.8 1440%2c162L1440 560L0 560z' fill='rgba(115%2c 86%2c 69%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c330 C 96%2c319 288%2c281.6 480%2c275 C 672%2c268.4 768%2c308.4 960%2c297 C 1152%2c285.6 1344%2c233.8 1440%2c218L1440 560L0 560z' fill='rgba(166%2c 84%2c 36%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c456 C 57.6%2c474.2 172.8%2c559.6 288%2c547 C 403.2%2c534.4 460.8%2c396 576%2c393 C 691.2%2c390 748.8%2c519.2 864%2c532 C 979.2%2c544.8 1036.8%2c451.8 1152%2c457 C 1267.2%2c462.2 1382.4%2c537.8 1440%2c558L1440 560L0 560z' fill='rgba(217%2c 137%2c 91%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1014'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 900 600' width='900' height='600' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Cpath d='M0 386L21.5 375.3C43 364.7 86 343.3 128.8 327.7C171.7 312 214.3 302 257.2 313.2C300 324.3 343 356.7 385.8 388.5C428.7 420.3 471.3 451.7 514.2 449.7C557 447.7 600 412.3 642.8 412.7C685.7 413 728.3 449 771.2 434.2C814 419.3 857 353.7 878.5 320.8L900 288L900 601L878.5 601C857 601 814 601 771.2 601C728.3 601 685.7 601 642.8 601C600 601 557 601 514.2 601C471.3 601 428.7 601 385.8 601C343 601 300 601 257.2 601C214.3 601 171.7 601 128.8 601C86 601 43 601 21.5 601L0 601Z' fill='%23D6D58E' stroke-linecap='round' stroke-linejoin='miter'%3E%3C/path%3E%3C/svg%3E");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -622,6 +622,18 @@ body.light-theme {
   font-size: var(--small-font-size);
   color: var(--text-color);
   width: max-content;
+}
+
+.skills__descriptions-container {
+  margin-bottom: 1rem;
+}
+
+.skills__description {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  opacity: 0.8;
 }
 /*=============== SERVICES ===============*/
 .services__container {
