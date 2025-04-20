@@ -188,7 +188,7 @@ body.light-theme {
 }
 
 .light-theme .footer {
-  background-color: #d6d58e;
+  background-color: #005C53;
 }
 
 .light-theme::-webkit-scrollbar {
@@ -394,7 +394,7 @@ body.light-theme {
 }
 
 .home {
-  background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 900 600' width='900' height='600' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Cpath d='M0 386L21.5 375.3C43 364.7 86 343.3 128.8 327.7C171.7 312 214.3 302 257.2 313.2C300 324.3 343 356.7 385.8 388.5C428.7 420.3 471.3 451.7 514.2 449.7C557 447.7 600 412.3 642.8 412.7C685.7 413 728.3 449 771.2 434.2C814 419.3 857 353.7 878.5 320.8L900 288L900 601L878.5 601C857 601 814 601 771.2 601C728.3 601 685.7 601 642.8 601C600 601 557 601 514.2 601C471.3 601 428.7 601 385.8 601C343 601 300 601 257.2 601C214.3 601 171.7 601 128.8 601C86 601 43 601 21.5 601L0 601Z' fill='%23D6D58E' stroke-linecap='round' stroke-linejoin='miter'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 900 600' width='900' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='100%25' x2='0%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23042940' /%3E%3Cstop offset='100%25' stop-color='%235c53db' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 386L21.5 375.3C43 364.7 86 343.3 128.8 327.7C171.7 312 214.3 302 257.2 313.2C300 324.3 343 356.7 385.8 388.5C428.7 420.3 471.3 451.7 514.2 449.7C557 447.7 600 412.3 642.8 412.7C685.7 413 728.3 449 771.2 434.2C814 419.3 857 353.7 878.5 320.8L900 288L900 601L878.5 601C857 601 814 601 771.2 601C728.3 601 685.7 601 642.8 601C600 601 557 601 514.2 601C471.3 601 428.7 601 385.8 601C343 601 300 601 257.2 601C214.3 601 171.7 601 128.8 601C86 601 43 601 21.5 601L0 601Z' fill='url(%23grad1)' stroke-linecap='round' stroke-linejoin='miter' /%3E%3C/svg%3E");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -1144,7 +1144,7 @@ body.light-theme {
 }
 /*=============== FOOTER ===============*/
 .footer {
-  background-color: #d6d58e;
+  background: linear-gradient(to bottom, #042940, #5c53db);
 }
 
 .footer__container {
