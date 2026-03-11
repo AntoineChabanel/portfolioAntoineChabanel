@@ -35,8 +35,8 @@ block content
         .home__data
           span.home__greeting Bonjour ! Je suis
           h1.home__name Antoine Chabanel
-          h3.home__education Développeur apprenti chez 
-            a(href="https://handiexceller.com" target="_blank") Handi Exceller
+          h3.home__education Développeur chez 
+            a(href="https://handiexceller.com" target="_blank") Handi Exceller , une entreprise visant à rendre l'apprentissage du braille ludique. 
           //- .home__buttons
           //-   a.button.button--ghost(href='assets/pdf/resume.pdf')
           //-     | View CV
@@ -111,10 +111,8 @@ block content
             b(style="color: var(--first-color);") radio-communication
             | .
           p.about__description
-            | 💭 Grâce à de récentes expériences et à ma formation, j'ai compris qu'il était important pour moi de faire quelque chose qui ait du sens et qui serve aux autres mais aussi de pouvoir avoir des responsabilités.
-          p.about__description
-            | 🔬 Cela m'a aussi permis d'élargir mon projet professionnel à d'autres horizons: je suis toujours intéressé par le domaine du développement de jeu vidéo mais je suis aussi ouvert 
-            b(style="color: var(--first-color);") à des domaines scientifiques et d'utilité publique.
+            | 💭🔬 À travers ces projets et mon emploi de développeur, j’ai progressivement développé un intérêt particulier pour la compréhension approfondie des systèmes informatiques, au-delà de leur simple utilisation. Cette curiosité pour les aspects techniques et conceptuels de l’informatique me motive aujourd’hui à poursuivre mes études à l’université, 
+            b(style="color: var(--first-color);") avec l’objectif de contribuer plus tard à des projets de recherche et de transmettre ces connaissances à travers l’enseignement.
           p.about__description
             | 📚 Retrouvez mes différents CV ici:
           a.button(id="cv-button") Télécharger mon CV
@@ -200,23 +198,15 @@ block content
     //-   a.button(href='/projects') Voir plus
     // =============== SKILLS ===============
     section#skills.skills.section
-      span.section__subtitle Compétences
-      h2.section__title Mes compétences
+      span.section__subtitle Outils
+      h2.section__title Mes outils
       div.skills__descriptions-container
         p.skills__description
-          | 🔧 Voici les 
-          b(style="color: var(--first-color);") logiciels et technologies
-          |  que j'utilise le plus.
+          | 🎓 J'ai étudié de 2022 à 2025 à 
+          a(style="color: var(--first-color); font-weight: bold" href="https://www.uca.fr/formation/nos-formations/par-ufr-ecoles-et-iut/iut-clermont-auvergne/but/but-informatique-le-puy" target="_blank") l'IUT Informatique appliquée à l'imagerie numérique au Puy-en-Velay
+          |.
         p.skills__description
-          | 🌐 Je suis 
-          b(style="color: var(--first-color);") polyvalent
-          | : 
-          b(style="color: var(--first-color);") développement web
-          |  avec Node.js, 
-          b(style="color: var(--first-color);") bureau
-          |  avec Qt et OpenGL, 
-          b(style="color: var(--first-color);") mobile
-          |  avec Unity, Android Studio, .NET...
+          | 🔧 Cette formation m'a donné la chance de pouvoir m'intéresser à beaucoup de domaines de l'informatique et technologies différentes.
       .skills__container.container.grid
         .skills__content
           h3.skills__title Logiciels/Technologies principales
@@ -235,9 +225,9 @@ block content
                 div
                   h3.skills__name OpenGL
               .skills__data
-                i.bx.bx-bot
+                i.bx.bxl-nodejs
                 div
-                  h3.skills__name Godot
+                  h3.skills__name Express, Vue, Adonis
               .skills__data
                 i.bx.bxl-docker
                 div
@@ -283,15 +273,11 @@ block content
                 i.bx.bxl-java
                 div
                   h3.skills__name Java
-              .skills__data
-                i.bx.bxl-nodejs
-                div
-                  h3.skills__name Express
             .skills__groups
               .skills__data
                 i.bx.bxl-javascript
                 div
-                  h3.skills__name JavaScript/TS
+                  h3.skills__name JS/TS
               .skills__data
                 i.bx.bxl-php
                 div
@@ -300,10 +286,6 @@ block content
                 i.bx.bx-data
                 div
                   h3.skills__name SQL
-              .skills__data
-                i.bx.bx-network-chart
-                div
-                  h3.skills__name Conception objet (UML)
               .skills__data
                 i.bx.bxl-html5
                 div

@@ -547,8 +547,8 @@ body.light-theme {
 
 .skills__content {
   background-color: var(--container-color);
-  padding: 1.5rem;
-  border-radius: 1.25rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
 }
 
 .skills__title {
@@ -579,12 +579,15 @@ body.light-theme {
   display: flex;
   justify-content: center;
   column-gap: 2.5rem;
+  align-items: flex-start;
 }
 
 .skills__groups {
   display: grid;
-  align-content: flex;
+  align-content: start;
   row-gap: 1rem;
+  min-width: 0;
+  flex: 1;
 }
 
 .skills__groups2 {
@@ -598,11 +601,20 @@ body.light-theme {
   column-gap: 0.5rem;
   justify-content: flex-start;
   align-items: center;
+  min-height: 2rem;
 }
 
 .skills .bxs-badge-check {
   font-size: 1rem;
   color: var(--first-color);
+}
+
+.skills__data i {
+  font-size: 1.2rem;
+  color: var(--first-color);
+  width: 1.5rem;
+  text-align: center;
+  flex-shrink: 0;
 }
 
 .skills__name {
