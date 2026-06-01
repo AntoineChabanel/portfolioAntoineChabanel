@@ -5,7 +5,12 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
-        ports:
-            - "3000:3000"
         container_name: antoine_portfolio_app
         restart: always
+        networks:
+            - frontend
+
+networks:
+    frontend:
+        external: true
+        name: http_frontend
